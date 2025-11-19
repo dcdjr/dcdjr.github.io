@@ -2,150 +2,204 @@
 <html lang="en">
 
 <head>
-	<script src="assets/JS/scripts.js"></script>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Projects by Daniel DiPietro, Computer Science student at URI specializing in cybersecurity and AI.">
-	<title>Daniel DiPietro - Projects</title>
+    <script src="assets/JS/scripts.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projects by Daniel DiPietro, Computer Science student at URI specializing in cybersecurity and AI.">
+    <title>Daniel DiPietro - Projects</title>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-	<link href="assets/CSS/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="assets/CSS/styles.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column min-vh-100 p1">
 
-	<!-- Header -->
-	<header>
-		<nav class="navbar navbar-expand-lg fixed-top px-3 shadow-sm bg-body-tertiary">
-			<div class="container-fluid">
-				<button class="btn btn-dark" id="dark-mode-toggle" aria-label="Toggle dark mode">
-					<i id="themeIcon" class="bi bi-moon fs-5"></i>
-				</button>
-				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top px-3 shadow-sm bg-body-tertiary">
+            <div class="container-fluid">
 
-				<div class="collapse navbar-collapse" id="navbarText">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-						<li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
-						<li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+                <button class="btn btn-dark" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i id="themeIcon" class="bi bi-moon fs-5"></i>
+                </button>
 
-	<!-- Main -->
-	<main class="flex-grow-1 mt-4 pt-4">
-		<div class="container text-center py-5">
-			<h1 class="text-center mb-3">My Projects</h1>
-			<p class="text-center lead mb-5">
-				Here are some of my projects with links to their GitHub repositories.
-			</p>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-			<div class="row g-4">
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
 
-				<!-- Password Manager -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card h-100 shadow-sm border">
-						<img src="assets/images/password.png" class="card-img-top rounded shadow-sm" alt="Password Manager">
-						<div class="card-body">
-							<h5 class="card-title">Password Manager (CS50 Final Project)</h5>
-							<p class="card-text">
-								A full-stack password manager built with Flask, SQLite, and Fernet encryption. Supports add/edit/delete, search, and secure credential storage.
-							</p>
-							<a href="https://github.com/dcdjr/Password50" target="_blank" class="btn btn-primary">GitHub</a>
-						</div>
-					</div>
-				</div>
+            </div>
+        </nav>
+    </header>
 
-				<!-- Memory Allocator -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card h-100 shadow-sm border">
-						<img src="assets/images/memory.png" class="card-img-top rounded shadow-sm" alt="Memory Allocator">
-						<div class="card-body">
-							<h5 class="card-title">Custom Memory Allocator</h5>
-							<p class="card-text">
-								A malloc/free implementation in C with a simulated heap, block headers, free list, and splitting/merging logic.
-							</p>
-							<a href="https://github.com/dcdjr" target="_blank" class="btn btn-primary">GitHub</a>
-						</div>
-					</div>
-				</div>
+    <!-- Main -->
+    <main class="flex-grow-1 mt-4 pt-4">
+        <div class="container text-center py-5">
 
-				<!-- Dynamic Array -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card h-100 shadow-sm border">
-						<img src="assets/images/array.png" class="card-img-top rounded shadow-sm" alt="Dynamic Array">
-						<div class="card-body">
-							<h5 class="card-title">Dynamic Array (C)</h5>
-							<p class="card-text">
-								A resizable array structure written in C with automatic capacity doubling, push/pop, and manual memory management.
-							</p>
-							<a href="https://github.com/dcdjr" target="_blank" class="btn btn-primary">GitHub</a>
-						</div>
-					</div>
-				</div>
+            <h1 class="text-center mb-3">My Projects</h1>
+            <p class="text-center lead mb-5">
+                Here are some of my projects with links to their GitHub repositories.
+            </p>
 
-				<!-- Port Scanner -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card h-100 shadow-sm border">
-						<img src="assets/images/portscan.png" class="card-img-top rounded shadow-sm" alt="Port Scanner">
-						<div class="card-body">
-							<h5 class="card-title">Port Scanner (C)</h5>
-							<p class="card-text">
-								A lightweight TCP port scanner using raw sockets, multithreading, and connection timeouts. Detects open ports efficiently.
-							</p>
-							<a href="https://github.com/dcdjr" target="_blank" class="btn btn-primary">GitHub</a>
-						</div>
-					</div>
-				</div>
+            <div class="row g-4">
 
-				<!-- Gemini AI Toolkit -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card h-100 shadow-sm border">
-						<img src="assets/images/gemini.png" class="card-img-top rounded shadow-sm" alt="Gemini AI Toolkit">
-						<div class="card-body">
-							<h5 class="card-title">Gemini AI Toolkit</h5>
-							<p class="card-text">
-								A collection of modular AI tools built in Google AI Studio. Includes math, code, writing, and general reasoning assistants. 2nd place at Hack@URI.
-							</p>
-							<a href="https://github.com/dcdjr" target="_blank" class="btn btn-primary">GitHub</a>
-						</div>
-					</div>
-				</div>
+                <!-- Password Manager -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
 
-				<!-- VR Training Research -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="card h-100 shadow-sm border">
-						<img src="assets/images/vr.jpg" class="card-img-top rounded shadow-sm" alt="VR Training Research">
-						<div class="card-body">
-							<h5 class="card-title">VR Training in the Military</h5>
-							<p class="card-text">
-								Research with the RI Air National Guard analyzing the effectiveness of VR-based training vs traditional methods.
-							</p>
-							<a href="https://github.com/dcdjr/VR-Training-Efficacy" target="_blank" class="btn btn-primary">GitHub</a>
-						</div>
-					</div>
-				</div>
+                        <div class="text-center py-4">
+                            <i class="bi bi-shield-lock fs-1 text-primary"></i>
+                        </div>
 
-			</div>
-		</div>
-	</main>
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Password Manager (CS50 Final Project)</h5>
+                            <p class="card-text small">
+                                A full-stack password manager built with Flask and SQLite. Uses Fernet for encryption.
+                                Built to learn full-stack development and secure credential storage.
+                            </p>
+                            <a href="https://github.com/dcdjr/Password50"
+                               target="_blank"
+                               class="btn btn-sm btn-primary">GitHub</a>
+                        </div>
 
-	<!-- Footer -->
-	<footer class="text-center py-3 mt-auto shadow-sm bg-body-tertiary">
-		<p class="mb-1 small text-muted">&copy; 2025 Daniel DiPietro</p>
-		<div class="d-flex justify-content-center gap-4">
-			<a href="mailto:ddipietro8227@gmail.com"><i class="bi bi-envelope fs-5 text-danger"></i></a>
-			<a href="https://github.com/dcdjr" target="_blank"><i class="bi bi-github fs-5 text-secondary"></i></a>
-			<a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank"><i class="bi bi-linkedin fs-5 text-primary"></i></a>
-		</div>
-	</footer>
+                    </div>
+                </div>
+
+                <!-- Memory Management Experiment -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="text-center py-4">
+                            <i class="bi bi-cpu fs-1 text-secondary"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Memory Management Experiment (C)</h5>
+                            <p class="card-text small">
+                                A learning project exploring how malloc/free work using a simple simulated heap,
+                                block headers, and a free list. Built to understand low-level memory behavior.
+                            </p>
+                            <a href="https://github.com/dcdjr"
+                               target="_blank"
+                               class="btn btn-sm btn-primary">GitHub</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Dynamic Array -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="text-center py-4">
+                            <i class="bi bi-braces fs-1 text-success"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Dynamic Array (C)</h5>
+                            <p class="card-text small">
+                                A resizable array built from scratch with manual memory handling. Created to
+                                practice pointer arithmetic, resizing logic, and data structures in C.
+                            </p>
+                            <a href="https://github.com/dcdjr"
+                               target="_blank"
+                               class="btn btn-sm btn-primary">GitHub</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Network Scanner -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="text-center py-4">
+                            <i class="bi bi-wifi fs-1 text-info"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Network Scanner (C — WIP)</h5>
+                            <p class="card-text small">
+                                A work-in-progress project experimenting with sockets, connection attempts,
+                                and timeouts. Built to understand basic networking behavior.
+                            </p>
+                            <a href="https://github.com/dcdjr"
+                               target="_blank"
+                               class="btn btn-sm btn-primary">GitHub</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Gemini AI Toolkit -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="text-center py-4">
+                            <i class="bi bi-stars fs-1 text-warning"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Gemini AI Toolkit</h5>
+                            <p class="card-text small">
+                                A set of multi-purpose AI tools built fully inside Google AI Studio. Covers math,
+                                code, writing, and Q&A modes. Created during Hack@URI (2nd place).
+                            </p>
+                            <a href="https://github.com/dcdjr"
+                               target="_blank"
+                               class="btn btn-sm btn-primary">GitHub</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- VR Training Research -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+
+                        <div class="text-center py-4">
+                            <i class="bi bi-vr fs-1 text-danger"></i>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">VR Training Research</h5>
+                            <p class="card-text small">
+                                Research project with the RI Air National Guard analyzing how VR impacts training
+                                speed, safety, and readiness compared to traditional methods.
+                            </p>
+                            <a href="https://github.com/dcdjr/VR-Training-Efficacy"
+                               target="_blank"
+                               class="btn btn-sm btn-primary">GitHub</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 mt-auto shadow-sm bg-body-tertiary">
+        <p class="mb-1 small text-muted">&copy; 2025 Daniel DiPietro</p>
+
+        <div class="d-flex justify-content-center gap-4">
+            <a href="mailto:ddipietro8227@gmail.com"><i class="bi bi-envelope fs-5 text-danger"></i></a>
+            <a href="https://github.com/dcdjr" target="_blank"><i class="bi bi-github fs-5 text-secondary"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank"><i class="bi bi-linkedin fs-5 text-primary"></i></a>
+        </div>
+    </footer>
 
 </body>
 </html>
