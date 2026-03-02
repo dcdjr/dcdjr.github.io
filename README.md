@@ -1,6 +1,8 @@
 # Personal Portfolio
 
-A simple, responsive portfolio site showcasing my work, skills, and background. Built with HTML, CSS, JavaScript, and Bootstrap.
+Personal portfolio site built with HTML, CSS, JavaScript, and Bootstrap.
+
+Showcases projects in systems programming, networking, and cybersecurity, along with background and contact information.
 
 ## Features
 - Landing page with quick intro and links
