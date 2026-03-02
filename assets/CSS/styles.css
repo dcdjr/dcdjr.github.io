@@ -1,8 +1,8 @@
 /* ------------------------------
    Typography
 --------------------------------*/
-.p1 {
-    font-family: "Times New Roman", Times, serif;
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 .indent {
