@@ -54,143 +54,192 @@
 
     <!-- Main -->
     <main class="flex-grow-1 mt-4 pt-4">
-        <div class="container text-center py-5">
+        <div class="container py-5">
+            <section class="hero-surface text-center mb-5">
+                <h1 class="section-title mb-3">Projects That Sharpen My Engineering Skills</h1>
+                <p class="section-subtitle lead mb-4">
+                    A curated set of projects focused on cybersecurity, systems programming, and software craftsmanship.
+                    Each one helped me understand low-level design, debugging, and real-world tradeoffs.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge text-bg-dark">C / C++ Systems</span>
+                    <span class="badge text-bg-primary">Networking & Security</span>
+                    <span class="badge text-bg-secondary">Applied Research</span>
+                    <span class="badge text-bg-success">Hackathon Build</span>
+                </div>
+            </section>
 
-            <h1 class="section-title text-center mb-3">My Projects</h1>
-            <p class="section-subtitle text-center lead mb-5">
-                A collection of projects I’ve built to explore cybersecurity, systems programming, and software engineering.
-            </p>
-
-                <div class="row g-4">
+            <div class="row g-4 projects-grid">
 
                 <!-- sgit -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-git fs-1 text-dark"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-git fs-3 text-dark"></i>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold">sgit – Git-like Version Control</h5>
-                            <p class="card-text small">
-                                Building a simplified version of Git in C++.
-                                Uses content-addressable storage, hashing, staging, and commits to understand how version control works under the hood.
-                            </p>
-                            <a href="https://github.com/dcdjr/sgit"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <h5 class="card-title fw-semibold">sgit — Git-like Version Control</h5>
+                            <div class="project-meta">
+                                <span class="badge">C++</span>
+                                <span class="badge">Data Structures</span>
+                                <span class="badge">File Systems</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Implements content-addressable storage and object hashing.</li>
+                                <li>Supports staging and commits inspired by real Git workflows.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/sgit" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- HTTP Server -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-hdd-network fs-1 text-secondary"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-hdd-network fs-3 text-secondary"></i>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">C++ HTTP Server</h5>
-                            <p class="card-text small">
-                                HTTP server built from scratch using sockets.
-                                Handles request parsing and responses over TCP while exploring how web servers actually work at a low level.
-                            </p>
-                            <a href="https://github.com/dcdjr/cpp-http-server"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <div class="project-meta">
+                                <span class="badge">C++</span>
+                                <span class="badge">Sockets</span>
+                                <span class="badge">TCP/IP</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Parses HTTP requests and builds responses over raw sockets.</li>
+                                <li>Explores concurrency and low-level web server mechanics.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/cpp-http-server" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- TCP Scanner -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-wifi fs-1 text-info"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-wifi fs-3 text-info"></i>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">TCP Port Scanner (C)</h5>
-                            <p class="card-text small">
-                                Multithreaded TCP port scanner written in C.
-                                Supports timeouts, basic banner grabbing, and low-level socket programming for fast network scanning.
-                            </p>
-                            <a href="https://github.com/dcdjr/c-port-scanner"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <div class="project-meta">
+                                <span class="badge">C</span>
+                                <span class="badge">Multithreading</span>
+                                <span class="badge">Network Recon</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Scans ranges quickly with timeout handling and threading.</li>
+                                <li>Includes basic banner grabbing for practical service detection.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/c-port-scanner" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Unix Shell -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-terminal fs-1 text-dark"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-terminal fs-3 text-dark"></i>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Minimal Unix Shell (C)</h5>
-                            <p class="card-text small">
-                                Unix-like shell built in C using POSIX APIs.
-                                Handles command parsing, fork/exec, built-ins, and signal handling so Ctrl-C kills the process, not the shell.
-                            </p>
-                            <a href="https://github.com/dcdjr/mini-shell"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <div class="project-meta">
+                                <span class="badge">C</span>
+                                <span class="badge">POSIX</span>
+                                <span class="badge">Process Control</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Implements command parsing, built-ins, and fork/exec.</li>
+                                <li>Handles signals so interrupts target child processes safely.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/mini-shell" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Password Manager -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-shield-lock fs-1 text-primary"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-shield-lock fs-3 text-primary"></i>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">Password Manager</h5>
-                            <p class="card-text small">
-                                Full-stack password manager built with Flask and SQLite.
-                                Encrypts credentials using Fernet with authentication and full CRUD support.
-                            </p>
-                            <a href="https://github.com/dcdjr/password50"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <div class="project-meta">
+                                <span class="badge">Flask</span>
+                                <span class="badge">SQLite</span>
+                                <span class="badge">Encryption</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Encrypts credentials using Fernet with secure auth flows.</li>
+                                <li>Supports full CRUD operations in a simple web interface.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/password50" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Gemini -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-stars fs-1 text-warning"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-stars fs-3 text-warning"></i>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-semibold">Gemini AI Toolkit (Hack@URI – 2nd)</h5>
-                            <p class="card-text small">
-                                Built a multi-mode AI toolkit during an 8-hour hackathon using Gemini APIs.
-                                Focused on structured prompts for math, code, and reasoning tasks.
-                            </p>
-                            <a href="https://github.com/dcdjr/gemini-ai-toolkit"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <h5 class="card-title fw-semibold">Gemini AI Toolkit (Hack@URI — 2nd)</h5>
+                            <div class="project-meta">
+                                <span class="badge">Hackathon</span>
+                                <span class="badge">Prompting</span>
+                                <span class="badge">Gemini API</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Built a multi-mode AI toolkit during an 8-hour sprint.</li>
+                                <li>Designed structured prompts for coding and reasoning tasks.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/gemini-ai-toolkit" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
                 <!-- Research -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="text-center py-4">
-                            <i class="bi bi-vr fs-1 text-danger"></i>
+                    <article class="card h-100 shadow-sm">
+                        <div class="project-icon">
+                            <i class="bi bi-vr fs-3 text-danger"></i>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fw-semibold">VR Training Research</h5>
-                            <p class="card-text small">
-                                Worked with the RI Air National Guard to analyze VR-based training vs traditional methods,
-                                focusing on performance and effectiveness.
-                            </p>
-                            <a href="https://github.com/dcdjr/VR-Training-Efficacy"
-                               target="_blank" class="btn btn-sm btn-primary">GitHub</a>
+                            <div class="project-meta">
+                                <span class="badge">Research</span>
+                                <span class="badge">Data Analysis</span>
+                                <span class="badge">Defense</span>
+                            </div>
+                            <ul class="project-highlight">
+                                <li>Compared VR-based military training with traditional methods.</li>
+                                <li>Analyzed effectiveness trends with RI Air National Guard data.</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/VR-Training-Efficacy" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View Code</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
             </div>
-
 
         </div>
     </main>
