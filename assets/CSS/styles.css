@@ -1,10 +1,34 @@
 /* ------------------------------
-   Typography
+   Global
 --------------------------------*/
-body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+:root {
+    --surface-radius: 1rem;
 }
 
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    padding-top: 2.5rem;
+}
+
+.section-title {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    max-width: 720px;
+    margin-inline: auto;
+    color: var(--bs-secondary-color);
+}
+
+/* ------------------------------
+   Typography
+--------------------------------*/
 .indent {
     text-indent: 1.5em;
 }
@@ -30,15 +54,17 @@ body {
    Images
 --------------------------------*/
 .profile-image {
-    max-width: 400px;
+    max-width: 360px;
     width: 100%;
     height: auto;
+    border: 4px solid rgba(var(--bs-primary-rgb), 0.15);
 }
 
 .profile-image-about {
-    max-width: 200px;
+    max-width: 220px;
     width: 100%;
     height: auto;
+    border: 3px solid rgba(var(--bs-primary-rgb), 0.15);
 }
 
 .qrcode {
@@ -48,9 +74,59 @@ body {
 /* ------------------------------
    Navbar
 --------------------------------*/
+.navbar {
+    backdrop-filter: blur(8px);
+}
+
 .navbar-nav .nav-item {
     display: flex;
     align-items: center;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding-inline: 0.75rem !important;
+}
+
+.navbar .nav-link.active {
+    background-color: rgba(var(--bs-primary-rgb), 0.14);
+    color: var(--bs-emphasis-color) !important;
+}
+
+/* ------------------------------
+   Components
+--------------------------------*/
+.btn {
+    border-radius: 0.65rem;
+}
+
+.card {
+    border-radius: var(--surface-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-title {
+    line-height: 1.35;
+}
+
+.badge {
+    border-radius: 999px;
+    padding: 0.45em 0.75em;
+}
+
+footer a {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 /* ------------------------------
@@ -68,7 +144,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0.5rem 0.75rem;
-
     border-radius: 0.5rem;
     line-height: 1;
     transition: background-color 0.2s ease, transform 0.2s ease;
