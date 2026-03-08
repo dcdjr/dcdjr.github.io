@@ -64,6 +64,7 @@ main {
 .section-title {
     font-weight: 800;
     letter-spacing: -0.03em;
+    font-size: clamp(2rem, 1.5rem + 1.5vw, 2.8rem);
 }
 
 .section-subtitle {
@@ -231,6 +232,11 @@ footer a:hover {
 .projects-grid .card-body {
     display: flex;
     flex-direction: column;
+}
+
+/* CHANGE: Center project card titles to satisfy requested card title alignment and improve visual balance. */
+.projects-grid .card-title {
+    text-align: center;
 }
 
 .project-icon {
