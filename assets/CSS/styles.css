@@ -5,10 +5,12 @@
     --surface-radius: 1rem;
     --surface-radius-lg: 1.4rem;
     --brand: #4f46e5;
+    --brand-strong: #3730a3;
     --brand-soft: rgba(79, 70, 229, 0.12);
     --hero-a: #eef2ff;
     --hero-b: #f8fafc;
     --card-border: rgba(148, 163, 184, 0.28);
+    --focus-ring: rgba(79, 70, 229, 0.35);
 }
 
 [data-bs-theme="dark"] {
@@ -16,6 +18,11 @@
     --hero-b: #0f172a;
     --brand-soft: rgba(129, 140, 248, 0.2);
     --card-border: rgba(100, 116, 139, 0.45);
+    --focus-ring: rgba(129, 140, 248, 0.42);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,13 +34,37 @@ body {
         linear-gradient(145deg, var(--hero-b), var(--bs-body-bg) 42%);
 }
 
+/* CHANGE: Added visible keyboard focus ring globally to improve accessibility and navigation confidence. */
+:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
 main {
     padding-top: 2.5rem;
+}
+
+/* CHANGE: Added skip-link styles so keyboard users can bypass repeated navigation quickly. */
+.skip-link {
+    position: absolute;
+    top: -120px;
+    left: 1rem;
+    z-index: 1050;
+    background: var(--bs-emphasis-color);
+    color: var(--bs-body-bg);
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0.85rem;
 }
 
 .section-title {
     font-weight: 800;
     letter-spacing: -0.03em;
+    font-size: clamp(2rem, 1.5rem + 1.5vw, 2.8rem);
 }
 
 .section-subtitle {
@@ -53,17 +84,13 @@ main {
 /* ------------------------------
    Typography
 --------------------------------*/
-.indent {
-    text-indent: 1.5em;
-}
-
 .subtext {
     font-size: 0.85rem;
     opacity: 0.8;
 }
 
 .uri {
-    color: #75B2DD;
+    color: color-mix(in srgb, var(--brand) 70%, #7dd3fc 30%);
     font-weight: 700;
 }
 
@@ -72,6 +99,13 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+/* CHANGE: Added reusable heading utility for better visual rhythm between sections. */
+.section-heading {
+    font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 /* ------------------------------
@@ -103,6 +137,12 @@ main {
     border-bottom: 1px solid var(--card-border);
 }
 
+/* CHANGE: Added branded site title to improve orientation and stronger first impression. */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
 .navbar-nav .nav-item {
     display: flex;
     align-items: center;
@@ -124,6 +164,7 @@ main {
 --------------------------------*/
 .btn {
     border-radius: 0.75rem;
+    font-weight: 600;
 }
 
 .btn-primary {
@@ -133,6 +174,14 @@ main {
 
 .btn-primary:hover {
     filter: brightness(1.05);
+}
+
+/* CHANGE: Added clear focus+hover state for outline button to improve affordance and contrast. */
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus-visible {
+    background-color: var(--bs-secondary-bg);
+    color: var(--bs-emphasis-color);
+    border-color: var(--card-border);
 }
 
 .card {
@@ -156,6 +205,14 @@ main {
     padding: 0.45em 0.75em;
 }
 
+/* CHANGE: Introduced feature-card wrapper for About/Connect consistency and cleaner spacing. */
+.feature-card {
+    padding: 1.5rem;
+    border: 1px solid var(--card-border);
+    border-radius: var(--surface-radius);
+    background: color-mix(in srgb, var(--bs-body-bg), transparent 3%);
+}
+
 footer {
     border-top: 1px solid var(--card-border);
 }
@@ -175,6 +232,11 @@ footer a:hover {
 .projects-grid .card-body {
     display: flex;
     flex-direction: column;
+}
+
+/* CHANGE: Center project card titles to satisfy requested card title alignment and improve visual balance. */
+.projects-grid .card-title {
+    text-align: center;
 }
 
 .project-icon {

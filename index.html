@@ -17,19 +17,23 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+	<!-- CHANGE: Added skip link to improve keyboard/screen-reader usability by skipping repeated nav. -->
+	<a class="skip-link" href="#main-content">Skip to main content</a>
 
 	<!-- Header -->
 	<header>
-		<nav class="navbar navbar-expand-lg fixed-top px-3 shadow-sm bg-body-tertiary">
+		<nav class="navbar navbar-expand-lg fixed-top px-3 shadow-sm bg-body-tertiary" aria-label="Primary navigation">
 			<div class="container-fluid">
+				<!-- CHANGE: Added a brand label so users always know what site/page context they are in. -->
+				<a class="navbar-brand" href="index.html">Daniel DiPietro</a>
 
 				<!-- Dark Mode Toggle -->
-				<button class="btn btn-dark me-2" id="dark-mode-toggle" aria-label="Toggle dark mode">
+				<button class="btn btn-dark me-2" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
 					<i id="themeIcon" class="bi bi-moon fs-5"></i>
 				</button>
 
 				<!-- Mobile Toggle -->
-				<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -43,37 +47,34 @@
 						<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
 					</ul>
 				</div>
-
 			</div>
 		</nav>
 	</header>
 
-	<!-- Main -->
-	<main class="flex-grow-1 mt-4 pt-4">
+	<!-- CHANGE: Added landmark id so skip link has a reliable target across all pages. -->
+	<main id="main-content" class="flex-grow-1 mt-4 pt-4">
 		<div class="container text-center py-5">
+			<section class="hero-surface">
+				<!-- CHANGE: Updated page heading text to match navbar wording for consistent page labeling. -->
+				<h1 class="section-title mb-3">Home</h1>
+				<p class="h4 fw-semibold mb-3">👋 I'm Daniel DiPietro Jr.</p>
 
-            <section class="hero-surface">
+				<p class="lead section-subtitle">
+					Computer Science student & Schilling Scholar at <span class="uri">URI</span> ·
+					Focused on systems programming, networking, and cybersecurity ·
+					Building low-level projects in C and C++.
+				</p>
 
-			<h1 class="section-title mb-3">👋 I'm Daniel DiPietro Jr.</h1>
+				<img src="assets/images/profile-image.jpg"
+					alt="Portrait of Daniel DiPietro Jr., Computer Science student at URI."
+					class="profile-image rounded-circle img-fluid my-3 shadow-sm"
+					loading="lazy">
 
-            <p class="lead section-subtitle">
-                Computer Science student & Schilling Scholar at <span class="uri">URI</span> ·
-                Focused on systems programming, networking, and cybersecurity ·
-                Building low-level projects in C and C++.
-            </p>
-
-			<img src="assets/images/profile-image.jpg"
-				alt="Portrait of Daniel DiPietro Jr., Computer Science student at URI."
-				class="profile-image rounded-circle img-fluid my-3 shadow-sm"
-				loading="lazy">
-
-			<div class="mt-4">
-				<a href="projects.html" class="btn btn-primary btn-lg me-2">View Projects</a>
-				<a href="connect.html" class="btn btn-outline-secondary btn-lg">Contact Me</a>
-			</div>
-
-            </section>
-
+				<div class="mt-4">
+					<a href="projects.html" class="btn btn-primary btn-lg me-2">View Projects</a>
+					<a href="connect.html" class="btn btn-outline-secondary btn-lg">Contact Me</a>
+				</div>
+			</section>
 		</div>
 	</main>
 
