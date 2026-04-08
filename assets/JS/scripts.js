@@ -1,34 +1,76 @@
-// CHANGE: Respect persisted preference with a safe fallback to system preference for better first-load UX.
-const savedTheme = localStorage.getItem("theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
-document.documentElement.setAttribute("data-bs-theme", initialTheme);
+const storageKey = "theme";
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const readStoredTheme = () => {
+    try {
+        return localStorage.getItem(storageKey);
+    } catch (error) {
+        return null;
+    }
+};
+
+const writeStoredTheme = (theme) => {
+    try {
+        localStorage.setItem(storageKey, theme);
+    } catch (error) {
+        return;
+    }
+};
+
+const getPreferredTheme = () => readStoredTheme() || (systemTheme.matches ? "dark" : "light");
+
+const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-bs-theme", theme);
+
+    if (themeMeta) {
+        themeMeta.setAttribute("content", theme === "dark" ? "#07111d" : "#f4efe8");
+    }
+};
+
+applyTheme(getPreferredTheme());
 
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("dark-mode-toggle");
     const icon = document.getElementById("themeIcon");
-
-    // CHANGE: Guard clause prevents runtime errors if the toggle is missing on any future page.
-    if (!toggleButton || !icon) return;
+    const yearTargets = document.querySelectorAll("[data-current-year]");
 
     const syncThemeControl = (theme) => {
+        if (!toggleButton || !icon) return;
+
         const isDark = theme === "dark";
-        icon.classList.toggle("bi-sun", isDark);
-        icon.classList.toggle("bi-moon", !isDark);
-        toggleButton.classList.toggle("btn-light", isDark);
-        toggleButton.classList.toggle("btn-dark", !isDark);
-        // CHANGE: Update ARIA pressed state for assistive technology clarity.
+        icon.className = `bi ${isDark ? "bi-sun" : "bi-moon-stars"}`;
         toggleButton.setAttribute("aria-pressed", String(isDark));
+        toggleButton.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+        toggleButton.setAttribute("title", isDark ? "Switch to light theme" : "Switch to dark theme");
     };
 
-    syncThemeControl(initialTheme);
+    yearTargets.forEach((node) => {
+        node.textContent = String(new Date().getFullYear());
+    });
 
-    toggleButton.addEventListener("click", () => {
-        const darkMode = document.documentElement.getAttribute("data-bs-theme") === "dark";
-        const newTheme = darkMode ? "light" : "dark";
+    syncThemeControl(document.documentElement.getAttribute("data-bs-theme") || getPreferredTheme());
 
-        document.documentElement.setAttribute("data-bs-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
-        syncThemeControl(newTheme);
+    if (toggleButton) {
+        toggleButton.addEventListener("click", () => {
+            const currentTheme = document.documentElement.getAttribute("data-bs-theme") || "light";
+            const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+            applyTheme(nextTheme);
+            writeStoredTheme(nextTheme);
+            syncThemeControl(nextTheme);
+        });
+    }
+
+    systemTheme.addEventListener("change", (event) => {
+        if (readStoredTheme()) return;
+
+        const nextTheme = event.matches ? "dark" : "light";
+        applyTheme(nextTheme);
+        syncThemeControl(nextTheme);
+    });
+
+    requestAnimationFrame(() => {
+        document.body.classList.add("page-ready");
     });
 });

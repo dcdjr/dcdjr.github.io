@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="About Daniel DiPietro Jr. — Computer Science student at URI focused on cybersecurity, low-level systems, and hands-on engineering.">
-    <title>Daniel DiPietro - About</title>
+    <meta name="description" content="About Daniel DiPietro Jr., a URI Computer Science student focused on cybersecurity, low-level systems, and practical engineering.">
+    <meta name="theme-color" content="#f4efe8">
+    <title>About | Daniel DiPietro Jr.</title>
 
-    <!-- CSS + JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link href="assets/CSS/styles.css" rel="stylesheet">
@@ -15,138 +17,197 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="assets/JS/scripts.js"></script>
 </head>
-
 <body class="d-flex flex-column min-vh-100">
-    <!-- CHANGE: Added skip link for keyboard users and screen reader navigation efficiency. -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- Header -->
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top px-3 shadow-sm bg-body-tertiary" aria-label="Primary navigation">
-            <div class="container-fluid">
-                <!-- CHANGE: Added site brand for consistent orientation across pages. -->
-                <a class="navbar-brand" href="index.html">Daniel DiPietro</a>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Primary navigation">
+            <div class="container">
+                <a class="navbar-brand brand-mark" href="index.html">
+                    <span class="brand-badge" aria-hidden="true">DD</span>
+                    <span class="brand-text">Daniel DiPietro Jr.</span>
+                </a>
 
-                <!-- Dark Mode Toggle -->
-                <button class="btn btn-dark me-2" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-                    <i id="themeIcon" class="bi bi-moon fs-5"></i>
-                </button>
+                <div class="d-flex align-items-center gap-2 order-lg-2">
+                    <button class="btn theme-toggle" id="dark-mode-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                        <i id="themeIcon" class="bi bi-moon-stars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Toggle color theme</span>
+                    </button>
 
-                <!-- Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Nav Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
-                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    </ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
 
+                <div class="collapse navbar-collapse justify-content-end order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main id="main-content" class="flex-grow-1 mt-4 pt-4">
-        <div class="container py-5">
-            <section class="hero-surface mb-5">
-                <!-- CHANGE: Updated page heading text to match navbar wording for consistency. -->
-                <h1 class="section-title text-center mb-3">About</h1>
-                <p class="page-subtitle text-center mb-4">
-                    Computer Science student focused on systems programming, networking, and cybersecurity.
-                </p>
-
-                <div class="row align-items-center justify-content-center g-4">
-                    <div class="col-12 col-lg-7">
-                        <div class="about-copy">
-                            <p class="mb-3">
-                                I’m a Computer Science student at <span class="uri">URI</span> and a Schilling Scholar in the Honors College.
-                                I’m mainly focused on systems programming, networking, and cybersecurity, and I like building projects
-                                that force me to understand how things actually work under the hood.
-                            </p>
-
-                            <p class="mb-3">
-                                So far I’ve completed Harvard’s CS50, built projects in C and Python, and worked with the RI Air National Guard
-                                on a research project studying VR-based military training.
-                            </p>
-
-                            <p class="mb-0">
-                                Right now I’m working on systems projects like a tiny computer emulator and a custom home-built agentic AI assistant. Long term, I want to work somewhere that sits at the intersection of security and real systems.
-                            </p>
-                        </div>
+    <main id="main-content" class="site-main flex-grow-1">
+        <div class="container page-shell">
+            <section class="hero-panel page-reveal" aria-labelledby="about-title">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <p class="eyebrow">About</p>
+                        <h1 id="about-title" class="hero-title">I like software that rewards patience, debugging, and real understanding.</h1>
+                        <p class="hero-copy">
+                            I’m a Computer Science student at the University of Rhode Island and a Schilling Scholar in the Honors College.
+                            The work that pulls me in most lives close to the machine: systems programming, networking, cybersecurity, and the details that make software trustworthy.
+                        </p>
                     </div>
 
-                    <div class="col-10 col-sm-8 col-md-6 col-lg-3 text-center">
-                        <img src="assets/images/profile-image.jpg"
-                            alt="Portrait of Daniel DiPietro Jr."
-                            class="profile-image-about rounded-circle img-fluid shadow-sm"
-                            loading="lazy">
+                    <div class="col-lg-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Right now</p>
+                            <h2>Building depth, not just surface familiarity</h2>
+                            <p class="mb-0">I’m deliberately choosing projects that make process control, sockets, memory, and architecture feel concrete.</p>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <!-- CHANGE: Wrapped supporting content in feature cards to create stronger visual hierarchy and spacing consistency. -->
-            <div class="row align-items-stretch justify-content-center py-2 g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <section class="feature-card h-100 text-center">
-                        <h2 class="section-heading mb-3">Skills</h2>
-                        <span class="badge bg-primary mb-1">C</span>
-                        <span class="badge bg-secondary mb-1">C++</span>
-                        <span class="badge bg-success mb-1">Python</span><br>
-                        <span class="badge bg-danger mb-1">SQL</span>
-                        <span class="badge bg-info text-dark mb-1">Networking</span>
-                        <span class="badge bg-dark mb-1">Systems</span>
-                    </section>
+            <section class="section-block" aria-labelledby="story-title">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <article class="content-panel page-reveal" style="--reveal-delay: 0.08s;">
+                            <h2 id="story-title">How I think about engineering</h2>
+                            <p>
+                                Harvard’s CS50 gave me a strong start and made it clear that I enjoy learning by building. Since then, I’ve kept gravitating toward projects that strip away convenience and make me work through how software really behaves.
+                            </p>
+                            <p>
+                                I’ve built in C, C++, Python, and SQL, and I’ve also worked with the Rhode Island Air National Guard on a research project comparing VR-based military training with more traditional approaches. That mix of implementation and applied analysis has pushed me to care not just about whether something works, but why it works.
+                            </p>
+                            <p class="mb-0">
+                                Long term, I want to work where security and real systems meet. I’m motivated by the idea of building software that is thoughtful, resilient, and grounded in a real understanding of the underlying stack.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <aside class="portrait-panel page-reveal" style="--reveal-delay: 0.14s;">
+                            <img src="assets/images/profile-image.jpg"
+                                alt="Portrait of Daniel DiPietro Jr."
+                                class="profile-photo"
+                                loading="lazy">
+
+                            <div class="portrait-copy">
+                                <p class="stat-label">Quick facts</p>
+                                <ul class="detail-list">
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></span>
+                                        <div>
+                                            <strong>School</strong><br>
+                                            University of Rhode Island, Computer Science
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-award-fill"></i></span>
+                                        <div>
+                                            <strong>Program</strong><br>
+                                            Schilling Scholar, URI Honors College
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-cpu-fill"></i></span>
+                                        <div>
+                                            <strong>Current build</strong><br>
+                                            Tiny 8-bit computer emulator in C
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></span>
+                                        <div>
+                                            <strong>Career direction</strong><br>
+                                            Cybersecurity and low-level systems engineering
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="about-strengths-title">
+                <div class="mb-4 page-reveal" style="--reveal-delay: 0.2s;">
+                    <h2 id="about-strengths-title" class="section-heading">A little more detail</h2>
+                    <p class="section-intro">
+                        The through-line in my work is simple: I like challenging technical problems, I care about solid fundamentals, and I’m happiest when I’m learning by doing.
+                    </p>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <section class="feature-card h-100 quick-facts">
-                        <h2 class="section-heading mb-3">Quick Facts</h2>
-                        <ul class="quick-facts-list list-unstyled mb-0">
-                            <li>
-                                <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
-                                <span><strong>School:</strong> University of Rhode Island (Computer Science)</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-award-fill" aria-hidden="true"></i>
-                                <span><strong>Program:</strong> Schilling Scholar, URI Honors College</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-code-slash" aria-hidden="true"></i>
-                                <span><strong>Current Build Focus:</strong> Tiny 8-bit computer emulator in C</span>
-                            </li>
-                            <li>
-                                <i class="bi bi-shield-check" aria-hidden="true"></i>
-                                <span><strong>Career Interest:</strong> Cybersecurity and low-level systems engineering</span>
-                            </li>
-                        </ul>
-                    </section>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.24s;">
+                            <p class="card-kicker">Core tools</p>
+                            <h2>Languages and areas I keep returning to</h2>
+                            <div class="stack-list mt-3" aria-label="Primary tools and focus areas">
+                                <span class="tag-pill">C</span>
+                                <span class="tag-pill">C++</span>
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">SQL</span>
+                                <span class="tag-pill">Linux</span>
+                                <span class="tag-pill">Networking</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.3s;">
+                            <p class="card-kicker">Experience</p>
+                            <h2>Work that shaped how I learn</h2>
+                            <ul class="key-list mt-3">
+                                <li>CS50 gave me a rigorous first pass through core CS fundamentals.</li>
+                                <li>Research with the RI Air National Guard pushed me to think carefully about evidence and outcomes.</li>
+                                <li>Independent projects keep sharpening my intuition for debugging and design tradeoffs.</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="col-md-12 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.36s;">
+                            <p class="card-kicker">Working style</p>
+                            <h2>How I like to approach problems</h2>
+                            <ul class="key-list mt-3">
+                                <li>Start with the fundamentals and understand the abstraction before trusting it.</li>
+                                <li>Prefer clean, readable code over cleverness that is hard to maintain.</li>
+                                <li>Use projects as a way to turn vague curiosity into concrete understanding.</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-3 mt-auto shadow-sm bg-body-tertiary">
-        <p class="mb-1 small text-muted">&copy; 2025 Daniel DiPietro</p>
+    <footer class="site-footer mt-auto">
+        <div class="container footer-bar">
+            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr. Built with HTML, CSS, JavaScript, and Bootstrap.</p>
 
-        <div class="d-flex justify-content-center gap-4">
-            <a href="mailto:ddipietro8227@gmail.com" aria-label="Email">
-                <i class="bi bi-envelope fs-5 text-danger"></i>
-            </a>
-            <a href="https://github.com/dcdjr" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="bi bi-github fs-5 text-secondary"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="bi bi-linkedin fs-5 text-primary"></i>
-            </a>
+            <div class="footer-links" aria-label="External links">
+                <a class="footer-link" href="mailto:ddipietro8227@gmail.com" aria-label="Send Daniel an email">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+                <a class="footer-link" href="https://github.com/dcdjr" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's GitHub profile in a new tab">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <a class="footer-link" href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's LinkedIn profile in a new tab">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
