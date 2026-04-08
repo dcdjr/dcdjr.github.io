@@ -1,4 +1,4 @@
-Portfolio Site
+# Portfolio Site
 
 A polished, accessible personal portfolio site for me, built as a static GitHub Pages project with HTML, CSS, JavaScript, and Bootstrap.
 
