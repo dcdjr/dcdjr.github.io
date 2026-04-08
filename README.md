@@ -1,6 +1,6 @@
-# Daniel DiPietro Jr. Portfolio
+Portfolio Site
 
-A polished, accessible personal portfolio site for Daniel DiPietro Jr., built as a static GitHub Pages project with HTML, CSS, JavaScript, and Bootstrap.
+A polished, accessible personal portfolio site for me, built as a static GitHub Pages project with HTML, CSS, JavaScript, and Bootstrap.
 
 Live site: [dcdjr.me](https://dcdjr.me)
 
