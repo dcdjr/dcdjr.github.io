@@ -1,31 +1,31 @@
 :root {
     color-scheme: light;
     --nav-height: 4.75rem;
-    --bg: #f5f4ef;
-    --bg-secondary: #efeee8;
-    --surface: rgba(255, 255, 252, 0.86);
+    --bg: #f7f7f4;
+    --bg-secondary: #f7f7f4;
+    --surface: #ffffff;
     --surface-strong: #ffffff;
     --heading: #17191c;
     --text: #2a2f35;
     --muted: #666d75;
     --brand: #23384d;
     --brand-strong: #162637;
-    --brand-soft: rgba(35, 56, 77, 0.08);
+    --brand-soft: rgba(35, 56, 77, 0.05);
     --accent: #8a6a43;
-    --line: rgba(23, 25, 28, 0.1);
-    --line-strong: rgba(23, 25, 28, 0.16);
-    --shadow: 0 18px 44px rgba(23, 25, 28, 0.06);
-    --shadow-sm: 0 10px 26px rgba(23, 25, 28, 0.05);
-    --radius-lg: 1.25rem;
-    --radius-md: 0.95rem;
+    --line: rgba(23, 25, 28, 0.08);
+    --line-strong: rgba(23, 25, 28, 0.14);
+    --shadow: 0 1px 2px rgba(23, 25, 28, 0.04);
+    --shadow-sm: 0 1px 2px rgba(23, 25, 28, 0.04);
+    --radius-lg: 1rem;
+    --radius-md: 0.8rem;
     --focus-ring: rgba(35, 56, 77, 0.22);
 }
 
 [data-bs-theme="dark"] {
     color-scheme: dark;
     --bg: #0f1113;
-    --bg-secondary: #13171b;
-    --surface: rgba(19, 23, 27, 0.86);
+    --bg-secondary: #0f1113;
+    --surface: #14181c;
     --surface-strong: #171b20;
     --heading: #f4f5f7;
     --text: #d9dde2;
@@ -36,8 +36,8 @@
     --accent: #caa675;
     --line: rgba(244, 245, 247, 0.1);
     --line-strong: rgba(244, 245, 247, 0.16);
-    --shadow: 0 24px 54px rgba(0, 0, 0, 0.28);
-    --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.22);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.16);
     --focus-ring: rgba(217, 228, 239, 0.25);
 }
 
@@ -52,21 +52,11 @@ body {
     color: var(--text);
     line-height: 1.65;
     text-rendering: optimizeLegibility;
-    background: linear-gradient(180deg, var(--bg), var(--bg-secondary));
+    background: var(--bg);
 }
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0 0 auto 0;
-    height: 18rem;
-    pointer-events: none;
-    background: radial-gradient(circle at top center, rgba(35, 56, 77, 0.09), transparent 68%);
-    opacity: 0.78;
-}
-
-[data-bs-theme="dark"] body::before {
-    background: radial-gradient(circle at top center, rgba(217, 228, 239, 0.07), transparent 68%);
+    display: none;
 }
 
 img {
@@ -142,8 +132,8 @@ a:hover {
 .site-nav {
     min-height: var(--nav-height);
     border-bottom: 1px solid var(--line);
-    background: rgba(245, 244, 239, 0.8) !important;
-    backdrop-filter: blur(18px);
+    background: rgba(247, 247, 244, 0.92) !important;
+    backdrop-filter: blur(10px);
 }
 
 [data-bs-theme="dark"] .site-nav {
@@ -216,12 +206,11 @@ a:hover {
     border-radius: 0.95rem;
     background: var(--surface);
     color: var(--heading);
-    box-shadow: var(--shadow-sm);
-    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    box-shadow: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .theme-toggle:hover {
-    transform: translateY(-1px);
     background: var(--surface-strong);
     border-color: var(--line-strong);
 }
@@ -242,12 +231,12 @@ a:hover {
     border-radius: var(--radius-lg);
     background: var(--surface);
     box-shadow: var(--shadow);
-    backdrop-filter: blur(14px);
+    backdrop-filter: none;
 }
 
 .hero-panel,
 .content-panel {
-    padding: clamp(1.75rem, 2vw + 1rem, 3rem);
+    padding: clamp(1.4rem, 1.2vw + 1rem, 2.25rem);
 }
 
 .eyebrow,
@@ -263,17 +252,17 @@ a:hover {
 }
 
 .hero-title {
-    max-width: 13ch;
+    max-width: 15ch;
     margin-bottom: 1rem;
-    font-size: clamp(2.6rem, 4.4vw, 4.6rem);
-    line-height: 1.04;
+    font-size: clamp(2rem, 2.8vw, 3.2rem);
+    line-height: 1.08;
 }
 
 .hero-copy {
-    max-width: 62ch;
-    margin-bottom: 1.5rem;
+    max-width: 58ch;
+    margin-bottom: 1.25rem;
     color: var(--muted);
-    font-size: 1.03rem;
+    font-size: 1rem;
 }
 
 .hero-pills,
@@ -286,12 +275,12 @@ a:hover {
 .tag-pill {
     display: inline-flex;
     align-items: center;
-    padding: 0.45rem 0.9rem;
+    padding: 0.38rem 0.72rem;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: var(--brand-soft);
     color: var(--heading);
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 700;
 }
 
@@ -303,19 +292,18 @@ a:hover {
 }
 
 .hero-actions {
-    margin-top: 1.85rem;
+    margin-top: 1.45rem;
 }
 
 .btn {
     border-radius: 999px;
     font-weight: 800;
     letter-spacing: -0.01em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .btn:hover {
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .btn-primary {
@@ -358,7 +346,7 @@ a:hover {
 }
 
 .hero-stats {
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
 }
 
 .stat-card,
@@ -366,8 +354,8 @@ a:hover {
 .project-card,
 .contact-card {
     height: 100%;
-    padding: 1.45rem;
-    box-shadow: var(--shadow-sm);
+    padding: 1.2rem;
+    box-shadow: none;
 }
 
 .stat-card h2,
@@ -377,7 +365,7 @@ a:hover {
 .project-title,
 .portrait-panel h2 {
     margin-bottom: 0.7rem;
-    font-size: clamp(1.18rem, 1rem + 0.8vw, 1.65rem);
+    font-size: clamp(1.05rem, 0.96rem + 0.5vw, 1.35rem);
 }
 
 .stat-card p,
@@ -391,7 +379,7 @@ a:hover {
 }
 
 .stat-card h2 {
-    font-size: 1.08rem;
+    font-size: 1rem;
 }
 
 .portrait-panel {
@@ -407,7 +395,7 @@ a:hover {
     margin-inline: auto;
     border-radius: 1rem;
     border: 1px solid var(--line);
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .portrait-copy {
@@ -468,12 +456,12 @@ a:hover {
 }
 
 .section-block {
-    margin-top: 2.4rem;
+    margin-top: 2rem;
 }
 
 .section-heading {
     margin-bottom: 0.7rem;
-    font-size: clamp(1.8rem, 1.2rem + 1vw, 2.5rem);
+    font-size: clamp(1.45rem, 1.1rem + 0.7vw, 1.95rem);
 }
 
 .section-intro {
@@ -485,13 +473,12 @@ a:hover {
 .info-card,
 .project-card,
 .contact-card {
-    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    transition: border-color 0.2s ease;
 }
 
 .info-card:hover,
 .project-card:hover,
 .contact-card:hover {
-    transform: translateY(-3px);
     border-color: var(--line-strong);
 }
 
@@ -621,13 +608,59 @@ a:hover {
     background: var(--surface);
     color: var(--heading);
     text-decoration: none;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    box-shadow: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .footer-link:hover {
-    transform: translateY(-1px);
     border-color: var(--line-strong);
+    color: var(--brand-strong);
+}
+
+.contact-list {
+    display: grid;
+}
+
+.contact-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+    align-items: start;
+}
+
+.contact-entry:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.contact-entry:last-child {
+    padding-bottom: 0;
+}
+
+.contact-label {
+    color: var(--heading);
+    font-family: "IBM Plex Mono", "Segoe UI", monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-description {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.contact-value {
+    color: var(--heading);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contact-value:hover {
     color: var(--brand-strong);
 }
 
@@ -676,6 +709,15 @@ a:hover {
     .footer-bar {
         padding-bottom: 1.6rem;
     }
+
+    .contact-entry {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+
+    .contact-value {
+        white-space: normal;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -689,12 +731,12 @@ a:hover {
     }
 
     .hero-title {
-        font-size: clamp(2.15rem, 11vw, 2.75rem);
-        line-height: 1.06;
+        font-size: clamp(1.7rem, 8vw, 2.2rem);
+        line-height: 1.08;
     }
 
     .hero-copy {
-        font-size: 0.98rem;
+        font-size: 0.96rem;
     }
 
     .hero-actions,

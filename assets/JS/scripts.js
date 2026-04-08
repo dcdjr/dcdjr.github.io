@@ -24,7 +24,7 @@ const applyTheme = (theme) => {
     document.documentElement.setAttribute("data-bs-theme", theme);
 
     if (themeMeta) {
-        themeMeta.setAttribute("content", theme === "dark" ? "#0f1113" : "#f5f4ef");
+        themeMeta.setAttribute("content", theme === "dark" ? "#0f1113" : "#f7f7f4");
     }
 };
 

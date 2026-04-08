@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Selected projects by Daniel DiPietro Jr. across systems programming, networking, security, and research.">
-    <meta name="theme-color" content="#f5f4ef">
+    <meta name="description" content="Selected projects by Daniel DiPietro Jr. across systems programming, networking, infrastructure, and security.">
+    <meta name="theme-color" content="#f7f7f4">
     <title>Projects | Daniel DiPietro Jr.</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,26 +57,25 @@
             <section class="hero-panel page-reveal" aria-labelledby="projects-title">
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-8">
-                        <p class="eyebrow">Selected Work</p>
-                        <h1 id="projects-title" class="hero-title">Selected projects in systems, networking, and security.</h1>
+                        <p class="eyebrow">Projects</p>
+                        <h1 id="projects-title" class="hero-title">Projects in C, C++, Python, and infrastructure tooling.</h1>
                         <p class="hero-copy">
-                            These projects represent the work that has most shaped my understanding of software implementation, protocols, debugging, and technical tradeoffs.
+                            Most of my project work is hands-on systems and networking work, with an emphasis on implementation details, concurrency, and practical utility.
                         </p>
 
                         <div class="hero-pills" aria-label="Project themes">
                             <span class="tag-pill">Systems</span>
                             <span class="tag-pill">Networking</span>
+                            <span class="tag-pill">Linux</span>
                             <span class="tag-pill">Security</span>
-                            <span class="tag-pill">Research</span>
-                            <span class="tag-pill">Applied AI</span>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
                         <article class="stat-card">
-                            <p class="stat-label">Theme</p>
-                            <h2>Applied systems work</h2>
-                            <p class="mb-0">Each project was an opportunity to translate theory into working software and stronger engineering judgment.</p>
+                            <p class="stat-label">Project style</p>
+                            <h2>Implementation-driven</h2>
+                            <p class="mb-0">The common thread is low-level problem solving, clear system behavior, and software that does real work.</p>
                         </article>
                     </div>
                 </div>
@@ -84,9 +83,9 @@
 
             <section class="section-block" aria-labelledby="featured-projects-title">
                 <div class="mb-4 page-reveal" style="--reveal-delay: 0.08s;">
-                    <h2 id="featured-projects-title" class="section-heading">Featured Projects</h2>
+                    <h2 id="featured-projects-title" class="section-heading">Selected Projects</h2>
                     <p class="section-intro">
-                        A focused selection of work across networking, systems programming, security, and research.
+                        A representative set of systems, networking, web, and infrastructure projects.
                     </p>
                 </div>
 
@@ -94,18 +93,18 @@
                     <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.12s;">
                             <div>
-                                <p class="card-kicker">Networking / C++</p>
+                                <p class="card-kicker">C++ / POSIX</p>
                                 <h2 class="project-title">HTTP Server</h2>
                             </div>
-                            <p class="project-copy">A C++ HTTP server built to deepen my understanding of sockets, request parsing, and the lifecycle of network communication.</p>
+                            <p class="project-copy">Multithreaded HTTP/1.1 server in C++ built with POSIX sockets.</p>
                             <ul class="project-points">
-                                <li>Parses raw HTTP requests and constructs responses over TCP sockets.</li>
-                                <li>Explores how concurrency and low-level design choices affect server behavior.</li>
+                                <li>Implements request parsing, static file serving, MIME type detection, and robust error handling.</li>
+                                <li>Builds concurrent client handling and standards-compliant HTTP response generation over raw TCP sockets.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">C++</span>
+                                <span class="tag-pill">POSIX</span>
                                 <span class="tag-pill">Sockets</span>
-                                <span class="tag-pill">TCP/IP</span>
                             </div>
                             <div class="project-actions">
                                 <a href="https://github.com/dcdjr/cpp-http-server" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View HTTP Server source code on GitHub in a new tab">View Code</a>
@@ -116,40 +115,18 @@
                     <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.16s;">
                             <div>
-                                <p class="card-kicker">Security / C</p>
-                                <h2 class="project-title">TCP Port Scanner</h2>
-                            </div>
-                            <p class="project-copy">A lightweight scanner built to practice socket programming, timeout handling, and practical network visibility.</p>
-                            <ul class="project-points">
-                                <li>Performs concurrent host and port probing while managing connection timing cleanly.</li>
-                                <li>Strengthened my understanding of diagnostic tooling and defensive awareness.</li>
-                            </ul>
-                            <div class="project-meta" aria-label="Technologies used">
-                                <span class="tag-pill">C</span>
-                                <span class="tag-pill">Networking</span>
-                                <span class="tag-pill">Security</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/dcdjr/port-scanner" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View TCP Port Scanner source code on GitHub in a new tab">View Code</a>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-xl-4">
-                        <article class="project-card page-reveal" style="--reveal-delay: 0.2s;">
-                            <div>
-                                <p class="card-kicker">Systems / C</p>
+                                <p class="card-kicker">C / Unix</p>
                                 <h2 class="project-title">Minimal Unix Shell</h2>
                             </div>
-                            <p class="project-copy">A shell implementation focused on parsing, process creation, built-ins, and signal handling in a Unix-style environment.</p>
+                            <p class="project-copy">Modular Unix shell in C with fork/exec-based process execution, built-in commands, and signal handling.</p>
                             <ul class="project-points">
-                                <li>Implements command parsing and process spawning with clear control flow.</li>
-                                <li>Handles terminal signals so interrupts reach the correct process at the correct time.</li>
+                                <li>Implements command parsing, process execution, and built-ins such as <code>cd</code> and <code>exit</code>.</li>
+                                <li>Organizes the codebase around separation of concerns, defensive error handling, and maintainable systems-level design.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">C</span>
                                 <span class="tag-pill">POSIX</span>
-                                <span class="tag-pill">Process Control</span>
+                                <span class="tag-pill">Signals</span>
                             </div>
                             <div class="project-actions">
                                 <a href="https://github.com/dcdjr/c-mini-shell" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Minimal Unix Shell source code on GitHub in a new tab">View Code</a>
@@ -158,24 +135,45 @@
                     </div>
 
                     <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.2s;">
+                            <div>
+                                <p class="card-kicker">C / Windows</p>
+                                <h2 class="project-title">Port Scanner</h2>
+                            </div>
+                            <p class="project-copy">Multithreaded TCP port scanner for Windows built with Winsock2.</p>
+                            <ul class="project-points">
+                                <li>Implements concurrent connection attempts, banner grabbing, and timeout-based scanning.</li>
+                                <li>Uses low-level socket logic to identify exposed services and evaluate network attack surface.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">C</span>
+                                <span class="tag-pill">Winsock2</span>
+                                <span class="tag-pill">Networking</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/port-scanner" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Port Scanner source code on GitHub in a new tab">View Code</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.24s;">
                             <div>
-                                <p class="card-kicker">Security / Python</p>
-                                <h2 class="project-title">Password Manager</h2>
+                                <p class="card-kicker">Python / Flask</p>
+                                <h2 class="project-title">Password50</h2>
                             </div>
-                            <p class="project-copy">A secure credential management application built to practice encryption, authentication flow design, and practical CRUD workflows.</p>
+                            <p class="project-copy">Password management web application with encrypted storage and session-based authentication.</p>
                             <ul class="project-points">
-                                <li>Encrypts stored credentials with Fernet and supports authenticated user workflows.</li>
-                                <li>Combines backend logic with a straightforward interface focused on clarity and utility.</li>
+                                <li>Supports credential creation, editing, deletion, and encrypted storage using Fernet.</li>
+                                <li>Implements Flask routing, SQL CRUD operations, and a Bootstrap interface for credential management.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">Python</span>
                                 <span class="tag-pill">Flask</span>
                                 <span class="tag-pill">SQLite</span>
-                                <span class="tag-pill">Encryption</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/dcdjr/password50" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Password Manager source code on GitHub in a new tab">View Code</a>
+                                <a href="https://github.com/dcdjr/password50" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Password50 source code on GitHub in a new tab">View Code</a>
                             </div>
                         </article>
                     </div>
@@ -183,21 +181,18 @@
                     <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.28s;">
                             <div>
-                                <p class="card-kicker">Hackathon / Applied AI</p>
-                                <h2 class="project-title">Gemini AI Toolkit</h2>
+                                <p class="card-kicker">Infrastructure / Linux</p>
+                                <h2 class="project-title">Home Lab Server</h2>
                             </div>
-                            <p class="project-copy">A rapid prototyping project created at Hack@URI that focused on structured prompting, tool modes, and practical usability under time constraints.</p>
+                            <p class="project-copy">Self-hosted Ubuntu Server environment with secure remote access and ongoing administration.</p>
                             <ul class="project-points">
-                                <li>Built a multi-mode AI toolkit during an eight-hour sprint and earned second place.</li>
-                                <li>Strengthened how I think about product decisions when time, scope, and clarity all matter.</li>
+                                <li>Built and administered a system with roughly 3TB of storage, including OS installation and server configuration.</li>
+                                <li>Configured Tailscale-based remote access for private connectivity and cross-device administration.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
-                                <span class="tag-pill">Hackathon</span>
-                                <span class="tag-pill">Prompting</span>
-                                <span class="tag-pill">Gemini API</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/dcdjr/gemini-ai-toolkit" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Gemini AI Toolkit source code on GitHub in a new tab">View Code</a>
+                                <span class="tag-pill">Ubuntu Server</span>
+                                <span class="tag-pill">Tailscale</span>
+                                <span class="tag-pill">Self-Hosted</span>
                             </div>
                         </article>
                     </div>
@@ -205,21 +200,21 @@
                     <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.32s;">
                             <div>
-                                <p class="card-kicker">Research / Analysis</p>
-                                <h2 class="project-title">VR Training Research</h2>
+                                <p class="card-kicker">Hackathon / AI</p>
+                                <h2 class="project-title">Gemini AI Toolkit</h2>
                             </div>
-                            <p class="project-copy">A research project examining how VR-based military training compares with traditional approaches in effectiveness and learning outcomes.</p>
+                            <p class="project-copy">AI-assisted math web application built during an eight-hour mini-hackathon.</p>
                             <ul class="project-points">
-                                <li>Worked with Rhode Island Air National Guard data to evaluate trends and training impact.</li>
-                                <li>Strengthened my ability to connect technical work with practical, evidence-based conclusions.</li>
+                                <li>Uses the Gemini API, Wolfram Alpha, and Desmos in a single workflow for math problem solving.</li>
+                                <li>Built under tight time constraints with a focus on practical integration and usability.</li>
                             </ul>
-                            <div class="project-meta" aria-label="Project themes">
-                                <span class="tag-pill">Research</span>
-                                <span class="tag-pill">Data Analysis</span>
-                                <span class="tag-pill">Defense</span>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">Gemini API</span>
+                                <span class="tag-pill">Wolfram Alpha</span>
+                                <span class="tag-pill">Desmos</span>
                             </div>
                             <div class="project-actions">
-                                <a href="https://github.com/dcdjr/VR-Training-Efficacy" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View VR Training Research repository on GitHub in a new tab">View Code</a>
+                                <a href="https://github.com/dcdjr/gemini-ai-toolkit" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Gemini AI Toolkit source code on GitHub in a new tab">View Code</a>
                             </div>
                         </article>
                     </div>
@@ -230,7 +225,7 @@
 
     <footer class="site-footer mt-auto">
         <div class="container footer-bar">
-            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr. Built with HTML, CSS, JavaScript, and Bootstrap.</p>
+            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr.</p>
 
             <div class="footer-links" aria-label="External links">
                 <a class="footer-link" href="mailto:ddipietro8227@gmail.com" aria-label="Send Daniel an email">
