@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Selected projects by Daniel DiPietro Jr. across systems programming, networking, infrastructure, and security.">
+    <meta name="description" content="Selected projects by Daniel DiPietro Jr. across systems programming, networking, Linux, and security.">
     <meta name="theme-color" content="#f7f7f4">
     <title>Projects | Daniel DiPietro Jr.</title>
 
@@ -58,9 +58,9 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-8">
                         <p class="eyebrow">Projects</p>
-                        <h1 id="projects-title" class="hero-title">Projects in C, C++, Python, and infrastructure tooling.</h1>
+                        <h1 id="projects-title" class="hero-title">Systems, networking, and security projects.</h1>
                         <p class="hero-copy">
-                            Most of my project work is hands-on systems and networking work, with an emphasis on implementation details, concurrency, and practical utility.
+                            Most of my project work is in C, C++, and Python, with an emphasis on network services, process behavior, and infrastructure-oriented software.
                         </p>
 
                         <div class="hero-pills" aria-label="Project themes">
@@ -74,8 +74,8 @@
                     <div class="col-lg-4">
                         <article class="stat-card">
                             <p class="stat-label">Project style</p>
-                            <h2>Implementation-driven</h2>
-                            <p class="mb-0">The common thread is low-level problem solving, clear system behavior, and software that does real work.</p>
+                            <h2>Implementation first</h2>
+                            <p class="mb-0">The strongest projects here are about protocols, sockets, process control, and system behavior.</p>
                         </article>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                 <div class="mb-4 page-reveal" style="--reveal-delay: 0.08s;">
                     <h2 id="featured-projects-title" class="section-heading">Selected Projects</h2>
                     <p class="section-intro">
-                        A representative set of systems, networking, web, and infrastructure projects.
+                        A representative set of systems, networking, security, and infrastructure work.
                     </p>
                 </div>
 
@@ -96,10 +96,10 @@
                                 <p class="card-kicker">C++ / POSIX</p>
                                 <h2 class="project-title">HTTP Server</h2>
                             </div>
-                            <p class="project-copy">Multithreaded HTTP/1.1 server in C++ built with POSIX sockets.</p>
+                            <p class="project-copy">Multithreaded HTTP/1.1 server in C++ built on POSIX sockets.</p>
                             <ul class="project-points">
-                                <li>Implements request parsing, static file serving, MIME type detection, and robust error handling.</li>
-                                <li>Builds concurrent client handling and standards-compliant HTTP response generation over raw TCP sockets.</li>
+                                <li>Parses requests, serves static files, and builds responses with MIME and status handling.</li>
+                                <li>Uses threaded connection handling, socket-level I/O, and defensive error paths for concurrent clients.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">C++</span>
@@ -118,10 +118,10 @@
                                 <p class="card-kicker">C / Unix</p>
                                 <h2 class="project-title">Minimal Unix Shell</h2>
                             </div>
-                            <p class="project-copy">Modular Unix shell in C with fork/exec-based process execution, built-in commands, and signal handling.</p>
+                            <p class="project-copy">Unix shell in C built around fork/exec, built-ins, and signal handling.</p>
                             <ul class="project-points">
-                                <li>Implements command parsing, process execution, and built-ins such as <code>cd</code> and <code>exit</code>.</li>
-                                <li>Organizes the codebase around separation of concerns, defensive error handling, and maintainable systems-level design.</li>
+                                <li>Implements command parsing, process launching, and built-ins such as <code>cd</code> and <code>exit</code>.</li>
+                                <li>Covers core shell mechanics: parent/child process control, execution flow, and error handling.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">C</span>
@@ -140,10 +140,10 @@
                                 <p class="card-kicker">C / Windows</p>
                                 <h2 class="project-title">Port Scanner</h2>
                             </div>
-                            <p class="project-copy">Multithreaded TCP port scanner for Windows built with Winsock2.</p>
+                            <p class="project-copy">Multithreaded TCP port scanner in C for Windows using Winsock2.</p>
                             <ul class="project-points">
-                                <li>Implements concurrent connection attempts, banner grabbing, and timeout-based scanning.</li>
-                                <li>Uses low-level socket logic to identify exposed services and evaluate network attack surface.</li>
+                                <li>Scans ports concurrently with timeout-based connection handling and banner grabbing.</li>
+                                <li>Uses socket-level logic to identify reachable services and inspect exposed ports.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">C</span>
@@ -162,10 +162,10 @@
                                 <p class="card-kicker">Python / Flask</p>
                                 <h2 class="project-title">Password50</h2>
                             </div>
-                            <p class="project-copy">Password management web application with encrypted storage and session-based authentication.</p>
+                            <p class="project-copy">Credential manager built with Flask, SQLite, and Fernet encryption.</p>
                             <ul class="project-points">
-                                <li>Supports credential creation, editing, deletion, and encrypted storage using Fernet.</li>
-                                <li>Implements Flask routing, SQL CRUD operations, and a Bootstrap interface for credential management.</li>
+                                <li>Supports create, edit, and delete flows for stored credentials with encrypted values at rest.</li>
+                                <li>Implements authentication, session handling, and the CRUD logic behind the web interface.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">Python</span>
@@ -181,21 +181,18 @@
                     <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.28s;">
                             <div>
-                                <p class="card-kicker">Infrastructure / Linux</p>
+                                <p class="card-kicker">Linux / Infrastructure</p>
                                 <h2 class="project-title">Home Lab Server</h2>
                             </div>
-                            <p class="project-copy">Self-hosted Ubuntu Server environment with secure remote access and ongoing administration.</p>
+                            <p class="project-copy">Self-hosted Ubuntu Server system for storage, remote administration, and ongoing lab work.</p>
                             <ul class="project-points">
-                                <li>Built and administered a system with roughly 3TB of storage, including OS installation and server configuration.</li>
-                                <li>Configured Tailscale-based remote access for private connectivity and cross-device administration.</li>
+                                <li>Built a server with about 3 TB of storage, including OS setup and ongoing configuration.</li>
+                                <li>Uses Tailscale for remote access and routine administration across devices.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">Ubuntu Server</span>
                                 <span class="tag-pill">Tailscale</span>
                                 <span class="tag-pill">Self-Hosted</span>
-                            </div>
-                            <div class="project-actions">
-                                <span class="project-status">Ongoing build</span>
                             </div>
                         </article>
                     </div>
@@ -203,13 +200,13 @@
                     <div class="col-md-6 col-xl-4">
                         <article class="project-card page-reveal" style="--reveal-delay: 0.32s;">
                             <div>
-                                <p class="card-kicker">Hackathon / AI</p>
+                                <p class="card-kicker">Hackathon / Integration</p>
                                 <h2 class="project-title">Gemini AI Toolkit</h2>
                             </div>
-                            <p class="project-copy">AI-assisted math web application built during an eight-hour mini-hackathon.</p>
+                            <p class="project-copy">Hackathon-built math assistant that ties together Gemini, Wolfram Alpha, and Desmos.</p>
                             <ul class="project-points">
-                                <li>Uses the Gemini API, Wolfram Alpha, and Desmos in a single workflow for math problem solving.</li>
-                                <li>Built under tight time constraints with a focus on practical integration and usability.</li>
+                                <li>Built in about eight hours around a workflow for solving and checking math problems.</li>
+                                <li>Focused on API integration and useful output under tight time constraints.</li>
                             </ul>
                             <div class="project-meta" aria-label="Technologies used">
                                 <span class="tag-pill">Gemini API</span>
@@ -222,51 +219,49 @@
                         </article>
                     </div>
 
-                    <div class="col-md-6 col-xl-4">
-                        <article class="project-card page-reveal" style="--reveal-delay: 0.36s;">
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="in-progress-title">
+                <div class="mb-4 page-reveal" style="--reveal-delay: 0.08s;">
+                    <h2 id="in-progress-title" class="section-heading">In Progress</h2>
+                    <p class="section-intro">
+                        These projects are still taking shape, so the public descriptions stay brief.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.12s;">
                             <div class="project-heading">
                                 <div>
-                                    <p class="card-kicker">Work in Progress</p>
+                                    <p class="card-kicker">In Progress</p>
                                     <h2 class="project-title">HiveCore</h2>
                                 </div>
                                 <span class="project-state">WIP</span>
                             </div>
-                            <p class="project-copy">A project currently under active development, with details to be published as the build matures.</p>
+                            <p class="project-copy">Terminal-first AI project exploring assistant workflows and automation.</p>
                             <ul class="project-points">
-                                <li>Core structure and feature set are still being refined.</li>
-                                <li>A fuller technical breakdown and public links will be added once the project is ready to share.</li>
+                                <li>Explores assistant-style command-line interaction rather than a browser-first interface.</li>
+                                <li>The public write-up stays narrow while the scope and implementation are still settling.</li>
                             </ul>
-                            <div class="project-meta" aria-label="Project status">
-                                <span class="tag-pill">In Progress</span>
-                                <span class="tag-pill">WIP</span>
-                            </div>
-                            <div class="project-actions">
-                                <span class="project-status">Details coming soon</span>
-                            </div>
                         </article>
                     </div>
 
-                    <div class="col-md-6 col-xl-4">
-                        <article class="project-card page-reveal" style="--reveal-delay: 0.4s;">
+                    <div class="col-md-6">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.18s;">
                             <div class="project-heading">
                                 <div>
-                                    <p class="card-kicker">Work in Progress</p>
+                                    <p class="card-kicker">In Progress</p>
                                     <h2 class="project-title">tcom</h2>
                                 </div>
                                 <span class="project-state">WIP</span>
                             </div>
-                            <p class="project-copy">A project currently in progress, with the public-facing overview still being finalized.</p>
+                            <p class="project-copy">In-progress project with the public scope still being finalized.</p>
                             <ul class="project-points">
-                                <li>Implementation is actively underway, with the current scope still evolving.</li>
-                                <li>Additional notes, screenshots, and repository details will be added when it is ready for release.</li>
+                                <li>The scope is still moving enough that a detailed description would be misleading.</li>
+                                <li>A fuller summary will follow once the implementation and interface are stable.</li>
                             </ul>
-                            <div class="project-meta" aria-label="Project status">
-                                <span class="tag-pill">In Progress</span>
-                                <span class="tag-pill">WIP</span>
-                            </div>
-                            <div class="project-actions">
-                                <span class="project-status">Details coming soon</span>
-                            </div>
                         </article>
                     </div>
                 </div>

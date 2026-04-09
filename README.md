@@ -1,16 +1,15 @@
-# Portfolio Site
+# Portfolio
 
-A polished, accessible personal portfolio site for me, built as a static GitHub Pages project with HTML, CSS, JavaScript, and Bootstrap.
+Static portfolio site for Daniel DiPietro Jr., built with HTML, CSS, JavaScript, and Bootstrap and deployed on GitHub Pages.
 
 Live site: [dcdjr.me](https://dcdjr.me)
 
 ## Highlights
 
-- Responsive four-page portfolio experience
-- Custom visual system layered on top of Bootstrap
+- Four-page static site
+- Responsive layout with accessible navigation
 - Light and dark theme toggle with saved preference
-- Accessible navigation, skip links, focus states, and reduced-motion support
-- Refined project, about, and contact sections with stronger content hierarchy
+- Project, background, and contact pages
 
 ## Pages
 
@@ -43,13 +42,13 @@ Live site: [dcdjr.me](https://dcdjr.me)
 
 ## Local Development
 
-No build step is required.
+No build step is required. Use any static file server from the project root.
 
 1. Clone the repository.
-2. Start a static server from the project root:
+2. Start a static server, for example:
 
    ```bash
-   python3 -m http.server 8000
+   python -m http.server 8000
    ```
 
 3. Open [http://localhost:8000](http://localhost:8000) in your browser.

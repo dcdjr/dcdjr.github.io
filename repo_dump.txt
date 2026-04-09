@@ -1,0 +1,2082 @@
+REPOSITORY DUMP
+ROOT: C:\Users\ddipi\OneDrive\main\dcdjr.github.io
+TOTAL FILES: 10
+====================================================================================================
+
+====================================================================================================
+FILE: .gitignore
+SIZE: 228 bytes
+====================================================================================================
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Build / deps (if you ever add them)
+node_modules/
+dist/
+build/
+
+# Archives
+*.tar.gz
+*.zip
+
+# Env (future-proofing)
+.env
+
+
+====================================================================================================
+FILE: about.html
+SIZE: 13066 bytes
+====================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="About Daniel DiPietro Jr., a University of Rhode Island Computer Science student focused on systems programming, networking, and cybersecurity.">
+    <meta name="theme-color" content="#f7f7f4">
+    <title>About | Daniel DiPietro Jr.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="assets/CSS/styles.css" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/JS/scripts.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Primary navigation">
+            <div class="container">
+                <a class="navbar-brand brand-mark" href="index.html">
+                    <span class="brand-badge" aria-hidden="true">DD</span>
+                    <span class="brand-text">Daniel DiPietro Jr.</span>
+                </a>
+
+                <div class="d-flex align-items-center gap-2 order-lg-2">
+                    <button class="btn theme-toggle" id="dark-mode-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                        <i id="themeIcon" class="bi bi-moon-stars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Toggle color theme</span>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="connect.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="site-main flex-grow-1">
+        <div class="container page-shell">
+            <section class="hero-panel page-reveal" aria-labelledby="about-title">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <p class="eyebrow">About</p>
+                        <h1 id="about-title" class="hero-title">URI Computer Science student working across systems, cybersecurity, and technical support.</h1>
+                        <p class="hero-copy">
+                            I am a Schilling Scholar in the Honors College at the University of Rhode Island, with a 4.0 GPA and a Data Science minor.
+                            My work is centered on systems programming, networking, Linux environments, and practical cybersecurity.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Current roles</p>
+                            <h2>Student Information Technologist and Technical Content Lead</h2>
+                            <p class="mb-0">I split my time between live technical support work at URI and hands-on cybersecurity education through URI Cyber Club.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="story-title">
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <article class="content-panel page-reveal" style="--reveal-delay: 0.08s;">
+                            <h2 id="story-title">Background</h2>
+                            <p>
+                                At URI, I am pursuing a B.S. in Computer Science with coursework in data structures, mathematical tools for computing, and core computer science fundamentals. I also completed Harvard's CS50 as additional coursework.
+                            </p>
+                            <p>
+                                I currently work as a Student Information Technologist at the URI Memorial Union, where I troubleshoot hardware, software, and operating system issues in a live campus environment. The role also includes website accessibility work and support for day-to-day IT operations.
+                            </p>
+                            <p class="mb-0">
+                                Outside the classroom, I serve as Technical Content Lead for URI Cyber Club and compete in cybersecurity events such as NCAE Cyber Games. That work keeps me close to Linux systems, log analysis, networking, and hands-on security practice.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <aside class="portrait-panel page-reveal" style="--reveal-delay: 0.14s;">
+                            <img src="assets/images/profile-image.jpg"
+                                alt="Portrait of Daniel DiPietro Jr."
+                                class="profile-photo"
+                                loading="lazy">
+
+                            <div class="portrait-copy">
+                                <p class="stat-label">Quick facts</p>
+                                <ul class="detail-list">
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-mortarboard-fill"></i></span>
+                                        <div>
+                                            <strong>Education</strong><br>
+                                            B.S. Computer Science, expected May 2029
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-award-fill"></i></span>
+                                        <div>
+                                            <strong>Academic standing</strong><br>
+                                            4.0 GPA, Honors College, Data Science minor
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-pc-display"></i></span>
+                                        <div>
+                                            <strong>Campus role</strong><br>
+                                            Student Information Technologist at URI Memorial Union
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-shield-lock-fill"></i></span>
+                                        <div>
+                                            <strong>Cybersecurity work</strong><br>
+                                            URI Cyber Club leadership and NCAE Cyber Games competition
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="about-strengths-title">
+                <div class="mb-4 page-reveal" style="--reveal-delay: 0.2s;">
+                    <h2 id="about-strengths-title" class="section-heading">Technical summary</h2>
+                    <p class="section-intro">
+                        The main areas I keep working in are systems programming, networked software, Linux-based tooling, and practical security work.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.24s;">
+                            <p class="card-kicker">Languages</p>
+                            <h2>Primary programming languages</h2>
+                            <div class="stack-list mt-3" aria-label="Primary languages">
+                                <span class="tag-pill">C</span>
+                                <span class="tag-pill">C++</span>
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">SQL</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.3s;">
+                            <p class="card-kicker">Systems and tools</p>
+                            <h2>Development environment</h2>
+                            <div class="stack-list mt-3" aria-label="Systems tools">
+                                <span class="tag-pill">Linux</span>
+                                <span class="tag-pill">Git</span>
+                                <span class="tag-pill">GitHub</span>
+                                <span class="tag-pill">Make</span>
+                                <span class="tag-pill">SQLite</span>
+                                <span class="tag-pill">POSIX</span>
+                                <span class="tag-pill">Bash</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-12 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.36s;">
+                            <p class="card-kicker">Areas of interest</p>
+                            <h2>Current technical direction</h2>
+                            <ul class="key-list mt-3">
+                                <li>Systems programming and low-level software design</li>
+                                <li>Networking, infrastructure, and service behavior</li>
+                                <li>Cybersecurity labs, analysis, and competition work</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto">
+        <div class="container footer-bar">
+            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr.</p>
+
+            <div class="footer-links" aria-label="External links">
+                <a class="footer-link" href="mailto:ddipietro8227@gmail.com" aria-label="Send Daniel an email">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+                <a class="footer-link" href="https://github.com/dcdjr" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's GitHub profile in a new tab">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <a class="footer-link" href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's LinkedIn profile in a new tab">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+====================================================================================================
+FILE: assets\CSS\styles.css
+SIZE: 14953 bytes
+====================================================================================================
+:root {
+    color-scheme: light;
+    --nav-height: 4.75rem;
+    --bg: #f7f7f4;
+    --bg-secondary: #f7f7f4;
+    --surface: #ffffff;
+    --surface-strong: #ffffff;
+    --heading: #17191c;
+    --text: #2a2f35;
+    --muted: #666d75;
+    --brand: #23384d;
+    --brand-strong: #162637;
+    --brand-soft: rgba(35, 56, 77, 0.05);
+    --accent: #8a6a43;
+    --line: rgba(23, 25, 28, 0.08);
+    --line-strong: rgba(23, 25, 28, 0.14);
+    --shadow: 0 1px 2px rgba(23, 25, 28, 0.04);
+    --shadow-sm: 0 1px 2px rgba(23, 25, 28, 0.04);
+    --radius-lg: 1rem;
+    --radius-md: 0.8rem;
+    --focus-ring: rgba(35, 56, 77, 0.22);
+}
+
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f1113;
+    --bg-secondary: #0f1113;
+    --surface: #14181c;
+    --surface-strong: #171b20;
+    --heading: #f4f5f7;
+    --text: #d9dde2;
+    --muted: #a3abb4;
+    --brand: #d9e4ef;
+    --brand-strong: #ffffff;
+    --brand-soft: rgba(217, 228, 239, 0.08);
+    --accent: #caa675;
+    --line: rgba(244, 245, 247, 0.1);
+    --line-strong: rgba(244, 245, 247, 0.16);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.16);
+    --focus-ring: rgba(217, 228, 239, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    color: var(--text);
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    background: var(--bg);
+}
+
+body::before {
+    display: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    color: var(--heading);
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+p,
+li {
+    color: var(--text);
+}
+
+a {
+    color: var(--brand-strong);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+}
+
+a:hover {
+    color: var(--brand);
+}
+
+::selection {
+    background: var(--brand-soft);
+    color: var(--heading);
+}
+
+:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -6rem;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: var(--heading);
+    color: var(--surface-strong);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.site-main {
+    padding-top: calc(var(--nav-height) + 1.5rem);
+}
+
+.page-shell {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 3.5rem;
+}
+
+.site-nav {
+    min-height: var(--nav-height);
+    border-bottom: 1px solid var(--line);
+    background: rgba(247, 247, 244, 0.92) !important;
+    backdrop-filter: blur(10px);
+}
+
+[data-bs-theme="dark"] .site-nav {
+    background: rgba(15, 17, 19, 0.82) !important;
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--heading);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand-badge {
+    display: grid;
+    place-items: center;
+    width: 2.45rem;
+    height: 2.45rem;
+    border-radius: 0.8rem;
+    background: var(--heading);
+    color: var(--bg);
+    font-family: "IBM Plex Mono", "Segoe UI", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    box-shadow: var(--shadow-sm);
+}
+
+.brand-text {
+    white-space: nowrap;
+}
+
+.navbar-toggler {
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    padding: 0.55rem 0.8rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .nav-link {
+    padding: 0.55rem 0.9rem !important;
+    border-radius: 999px;
+    color: var(--muted);
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    background: var(--brand-soft);
+    color: var(--heading);
+}
+
+.navbar .nav-link.active {
+    background: var(--brand-soft);
+    color: var(--heading) !important;
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 0.95rem;
+    background: var(--surface);
+    color: var(--heading);
+    box-shadow: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--surface-strong);
+    border-color: var(--line-strong);
+}
+
+#themeIcon {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.hero-panel,
+.content-panel,
+.info-card,
+.project-card,
+.contact-card,
+.stat-card,
+.portrait-panel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    backdrop-filter: none;
+}
+
+.hero-panel,
+.content-panel {
+    padding: clamp(1.4rem, 1.2vw + 1rem, 2.25rem);
+}
+
+.eyebrow,
+.card-kicker,
+.stat-label {
+    margin-bottom: 0.85rem;
+    color: var(--muted);
+    font-family: "IBM Plex Mono", "Segoe UI", monospace;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    max-width: 15ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 2.8vw, 3.2rem);
+    line-height: 1.08;
+}
+
+.hero-copy {
+    max-width: 58ch;
+    margin-bottom: 1.25rem;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.hero-pills,
+.stack-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.tag-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.38rem 0.72rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--brand-soft);
+    color: var(--heading);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.hero-actions,
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+.hero-actions {
+    margin-top: 1.45rem;
+}
+
+.btn {
+    border-radius: 999px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.btn-primary {
+    border: 1px solid var(--heading);
+    background: var(--heading);
+    color: var(--bg);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    border-color: var(--heading);
+    background: var(--heading);
+    color: var(--bg);
+    filter: brightness(1.02);
+}
+
+.hero-stats {
+    margin-top: 1.6rem;
+}
+
+.stat-card,
+.info-card,
+.project-card,
+.contact-card {
+    height: 100%;
+    padding: 1.2rem;
+    box-shadow: none;
+}
+
+.stat-card h2,
+.content-panel h2,
+.info-card h2,
+.contact-card h2,
+.project-title,
+.portrait-panel h2 {
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.05rem, 0.96rem + 0.5vw, 1.35rem);
+}
+
+.stat-card p,
+.content-panel p,
+.info-card p,
+.contact-card p,
+.portrait-panel p,
+.project-copy,
+.footer-copy {
+    color: var(--muted);
+}
+
+.stat-card h2 {
+    font-size: 1rem;
+}
+
+.portrait-panel {
+    height: 100%;
+    padding: 1rem;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 22rem;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    margin-inline: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--line);
+    box-shadow: none;
+}
+
+.portrait-copy {
+    padding: 1rem 0.25rem 0.25rem;
+}
+
+.detail-list,
+.key-list,
+.project-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.detail-list {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.detail-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+
+.icon-badge {
+    display: grid;
+    place-items: center;
+    width: 2.55rem;
+    height: 2.55rem;
+    flex-shrink: 0;
+    border: 1px solid var(--line);
+    border-radius: 0.9rem;
+    background: var(--brand-soft);
+    color: var(--heading);
+}
+
+.key-list {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.key-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--muted);
+}
+
+.key-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: var(--accent);
+}
+
+.section-block {
+    margin-top: 2rem;
+}
+
+.section-heading {
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.45rem, 1.1rem + 0.7vw, 1.95rem);
+}
+
+.section-intro {
+    max-width: 62ch;
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.info-card,
+.project-card,
+.contact-card {
+    transition: border-color 0.2s ease;
+}
+
+.info-card:hover,
+.project-card:hover,
+.contact-card:hover {
+    border-color: var(--line-strong);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.9rem;
+}
+
+.project-title {
+    margin-bottom: 0.5rem;
+}
+
+.project-state {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.72rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--brand-soft);
+    color: var(--heading);
+    font-family: "IBM Plex Mono", "Segoe UI", monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.project-copy {
+    margin-bottom: 0;
+}
+
+.project-points {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.project-points li {
+    position: relative;
+    padding-left: 1.15rem;
+    color: var(--text);
+}
+
+.project-points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72rem;
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: var(--accent);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.project-actions {
+    margin-top: auto;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.72rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-strong);
+    color: var(--heading);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-icon {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid var(--line);
+    border-radius: 0.95rem;
+    background: var(--brand-soft);
+    color: var(--heading);
+}
+
+.contact-link {
+    color: var(--heading);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: var(--brand-strong);
+}
+
+.contact-note {
+    margin-bottom: 0;
+}
+
+.qr-frame {
+    display: inline-block;
+    padding: 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    background: var(--surface-strong);
+}
+
+.qrcode {
+    width: min(100%, 12.5rem);
+    border-radius: 0.75rem;
+}
+
+.site-footer {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.4rem 0 2rem;
+    border-top: 1px solid var(--line);
+}
+
+.footer-copy {
+    max-width: 38rem;
+    margin-bottom: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--heading);
+    text-decoration: none;
+    box-shadow: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-link:hover {
+    border-color: var(--line-strong);
+    color: var(--brand-strong);
+}
+
+.contact-list {
+    display: grid;
+}
+
+.contact-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+    align-items: start;
+}
+
+.contact-entry:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.contact-entry:last-child {
+    padding-bottom: 0;
+}
+
+.contact-label {
+    color: var(--heading);
+    font-family: "IBM Plex Mono", "Segoe UI", monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-description {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.contact-value {
+    color: var(--heading);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.contact-value:hover {
+    color: var(--brand-strong);
+}
+
+.page-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.page-ready .page-reveal {
+    animation: rise-in 0.64s cubic-bezier(0.2, 0.9, 0.25, 1) forwards;
+    animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes rise-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: var(--surface-strong);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title {
+        max-width: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .site-main {
+        padding-top: calc(var(--nav-height) + 1.05rem);
+    }
+
+    .hero-panel,
+    .content-panel {
+        padding: 1.45rem;
+    }
+
+    .footer-bar {
+        padding-bottom: 1.6rem;
+    }
+
+    .contact-entry {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+    }
+
+    .contact-value {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .brand-text {
+        font-size: 0.96rem;
+    }
+
+    .brand-badge {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .hero-title {
+        font-size: clamp(1.7rem, 8vw, 2.2rem);
+        line-height: 1.08;
+    }
+
+    .hero-copy {
+        font-size: 0.96rem;
+    }
+
+    .hero-actions,
+    .project-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        width: 100%;
+    }
+
+    .footer-link {
+        justify-content: center;
+        flex: 1 1 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .page-reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+====================================================================================================
+FILE: assets\JS\scripts.js
+SIZE: 2547 bytes
+====================================================================================================
+const storageKey = "theme";
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+const readStoredTheme = () => {
+    try {
+        return localStorage.getItem(storageKey);
+    } catch (error) {
+        return null;
+    }
+};
+
+const writeStoredTheme = (theme) => {
+    try {
+        localStorage.setItem(storageKey, theme);
+    } catch (error) {
+        return;
+    }
+};
+
+const getPreferredTheme = () => readStoredTheme() || (systemTheme.matches ? "dark" : "light");
+
+const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-bs-theme", theme);
+
+    if (themeMeta) {
+        themeMeta.setAttribute("content", theme === "dark" ? "#0f1113" : "#f7f7f4");
+    }
+};
+
+applyTheme(getPreferredTheme());
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const icon = document.getElementById("themeIcon");
+    const yearTargets = document.querySelectorAll("[data-current-year]");
+
+    const syncThemeControl = (theme) => {
+        if (!toggleButton || !icon) return;
+
+        const isDark = theme === "dark";
+        icon.className = `bi ${isDark ? "bi-sun" : "bi-moon-stars"}`;
+        toggleButton.setAttribute("aria-pressed", String(isDark));
+        toggleButton.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+        toggleButton.setAttribute("title", isDark ? "Switch to light theme" : "Switch to dark theme");
+    };
+
+    yearTargets.forEach((node) => {
+        node.textContent = String(new Date().getFullYear());
+    });
+
+    syncThemeControl(document.documentElement.getAttribute("data-bs-theme") || getPreferredTheme());
+
+    if (toggleButton) {
+        toggleButton.addEventListener("click", () => {
+            const currentTheme = document.documentElement.getAttribute("data-bs-theme") || "light";
+            const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+            applyTheme(nextTheme);
+            writeStoredTheme(nextTheme);
+            syncThemeControl(nextTheme);
+        });
+    }
+
+    systemTheme.addEventListener("change", (event) => {
+        if (readStoredTheme()) return;
+
+        const nextTheme = event.matches ? "dark" : "light";
+        applyTheme(nextTheme);
+        syncThemeControl(nextTheme);
+    });
+
+    requestAnimationFrame(() => {
+        document.body.classList.add("page-ready");
+    });
+});
+
+
+====================================================================================================
+FILE: CNAME
+SIZE: 10 bytes
+====================================================================================================
+dcdjr.me
+
+
+====================================================================================================
+FILE: connect.html
+SIZE: 7843 bytes
+====================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact information and professional links for Daniel DiPietro Jr.">
+    <meta name="theme-color" content="#f7f7f4">
+    <title>Contact | Daniel DiPietro Jr.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="assets/CSS/styles.css" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/JS/scripts.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Primary navigation">
+            <div class="container">
+                <a class="navbar-brand brand-mark" href="index.html">
+                    <span class="brand-badge" aria-hidden="true">DD</span>
+                    <span class="brand-text">Daniel DiPietro Jr.</span>
+                </a>
+
+                <div class="d-flex align-items-center gap-2 order-lg-2">
+                    <button class="btn theme-toggle" id="dark-mode-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                        <i id="themeIcon" class="bi bi-moon-stars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Toggle color theme</span>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="connect.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="site-main flex-grow-1">
+        <div class="container page-shell">
+            <section class="hero-panel page-reveal" aria-labelledby="connect-title">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <p class="eyebrow">Contact</p>
+                        <h1 id="connect-title" class="hero-title">Contact information and professional links.</h1>
+                        <p class="hero-copy">
+                            Email is the best way to reach me for internships, project work, or technical opportunities.
+                            Additional links are below.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Primary contact</p>
+                            <h2>ddipietro8227@gmail.com</h2>
+                            <p class="mb-0">Best for recruiting, technical conversations, project opportunities, and general outreach.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="contact-options-title">
+                <article class="content-panel page-reveal" style="--reveal-delay: 0.08s;">
+                    <h2 id="contact-options-title" class="section-heading">Links</h2>
+                    <div class="contact-list" aria-label="Professional links">
+                        <div class="contact-entry">
+                            <div class="contact-label">Email</div>
+                            <p class="contact-description">Primary contact for internships, project work, and technical opportunities.</p>
+                            <a class="contact-value" href="mailto:ddipietro8227@gmail.com">ddipietro8227@gmail.com</a>
+                        </div>
+
+                        <div class="contact-entry">
+                            <div class="contact-label">GitHub</div>
+                            <p class="contact-description">Source code, repositories, and recent project work.</p>
+                            <a class="contact-value" href="https://github.com/dcdjr" target="_blank" rel="noopener noreferrer">github.com/dcdjr</a>
+                        </div>
+
+                        <div class="contact-entry">
+                            <div class="contact-label">LinkedIn</div>
+                            <p class="contact-description">Professional background, education, and current experience.</p>
+                            <a class="contact-value" href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener noreferrer">linkedin.com/in/daniel-dipietro-jr</a>
+                        </div>
+
+                        <div class="contact-entry">
+                            <div class="contact-label">Resume</div>
+                            <p class="contact-description">Current resume with education, experience, and technical projects.</p>
+                            <a class="contact-value" href="https://docs.google.com/document/d/1YNH7DZGvcy2bwyhbGXe8ezDIzR7I3bxUn3yWy0t9g8Q/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Open resume</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto">
+        <div class="container footer-bar">
+            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr.</p>
+
+            <div class="footer-links" aria-label="External links">
+                <a class="footer-link" href="mailto:ddipietro8227@gmail.com" aria-label="Send Daniel an email">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+                <a class="footer-link" href="https://github.com/dcdjr" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's GitHub profile in a new tab">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <a class="footer-link" href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's LinkedIn profile in a new tab">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+====================================================================================================
+FILE: index.html
+SIZE: 13022 bytes
+====================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Daniel DiPietro Jr., a University of Rhode Island Computer Science student focused on systems programming, networking, and security.">
+    <meta name="theme-color" content="#f7f7f4">
+    <title>Daniel DiPietro Jr. | Systems, Networking, and Security</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="assets/CSS/styles.css" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/JS/scripts.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Primary navigation">
+            <div class="container">
+                <a class="navbar-brand brand-mark" href="index.html">
+                    <span class="brand-badge" aria-hidden="true">DD</span>
+                    <span class="brand-text">Daniel DiPietro Jr.</span>
+                </a>
+
+                <div class="d-flex align-items-center gap-2 order-lg-2">
+                    <button class="btn theme-toggle" id="dark-mode-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                        <i id="themeIcon" class="bi bi-moon-stars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Toggle color theme</span>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="connect.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="site-main flex-grow-1">
+        <div class="container page-shell">
+            <section class="hero-panel page-reveal" aria-labelledby="home-title">
+                <div class="row align-items-center g-4 g-xl-5">
+                    <div class="col-lg-7">
+                        <p class="eyebrow">Computer Science / Systems / Security</p>
+                        <h1 id="home-title" class="hero-title">Computer Science student focused on systems, networking, and security.</h1>
+                        <p class="hero-copy">
+                            I am Daniel DiPietro Jr., a University of Rhode Island Computer Science student, Schilling Scholar, and Data Science minor.
+                            I build primarily in C, C++, and Python, with an emphasis on systems programming, networking, and practical cybersecurity work.
+                        </p>
+
+                        <div class="hero-pills" aria-label="Core focus areas">
+                            <span class="tag-pill">C</span>
+                            <span class="tag-pill">C++</span>
+                            <span class="tag-pill">Python</span>
+                            <span class="tag-pill">Linux</span>
+                            <span class="tag-pill">POSIX</span>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="projects.html" class="btn btn-primary btn-lg">View Projects</a>
+                            <a href="https://docs.google.com/document/d/1YNH7DZGvcy2bwyhbGXe8ezDIzR7I3bxUn3yWy0t9g8Q/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Resume</a>
+                            <a href="connect.html" class="btn btn-primary btn-lg">Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <aside class="portrait-panel">
+                            <img src="assets/images/profile-image.jpg"
+                                alt="Portrait of Daniel DiPietro Jr."
+                                class="profile-photo"
+                                loading="lazy">
+
+                            <div class="portrait-copy">
+                                <p class="stat-label">Current roles</p>
+                                <h2>Work, leadership, and competition</h2>
+                                <ul class="detail-list">
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-pc-display"></i></span>
+                                        <div>
+                                            <strong>Student Information Technologist</strong><br>
+                                            URI Memorial Union
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
+                                        <div>
+                                            <strong>Technical Content Lead</strong><br>
+                                            URI Cyber Club
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="icon-badge" aria-hidden="true"><i class="bi bi-trophy"></i></span>
+                                        <div>
+                                            <strong>Competitor</strong><br>
+                                            NCAE Cyber Games and NCL
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <div class="row g-3 hero-stats">
+                    <div class="col-md-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Education</p>
+                            <h2>B.S. Computer Science</h2>
+                            <p class="mb-0">University of Rhode Island, expected May 2029. 4.0 GPA, Honors College, Data Science minor.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Experience</p>
+                            <h2>Frontline IT support</h2>
+                            <p class="mb-0">Troubleshooting hardware, software, and operating system issues while supporting accessibility and daily IT operations.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Focus</p>
+                            <h2>Systems and cybersecurity</h2>
+                            <p class="mb-0">Systems programming, network services, Linux environments, and hands-on cybersecurity labs and competition work.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="home-highlights-title">
+                <div class="mb-4 page-reveal" style="--reveal-delay: 0.08s;">
+                    <h2 id="home-highlights-title" class="section-heading">Current focus</h2>
+                    <p class="section-intro">
+                        The work here reflects the same areas I keep returning to in class, on campus, and in project work.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.12s;">
+                            <p class="card-kicker">Project work</p>
+                            <h2>Systems and network programming</h2>
+                            <ul class="key-list mt-3">
+                                <li>Multithreaded HTTP server work in C++ using POSIX sockets</li>
+                                <li>Unix shell development in C with fork/exec and signal handling</li>
+                                <li>Low-level network tooling and service analysis</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.18s;">
+                            <p class="card-kicker">Experience</p>
+                            <h2>Campus IT and cybersecurity</h2>
+                            <ul class="key-list mt-3">
+                                <li>Student Information Technologist supporting live users and website accessibility</li>
+                                <li>Technical Content Lead developing workshops and cybersecurity labs</li>
+                                <li>Hands-on competition work in Linux, networking, and log analysis</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="col-md-12 col-xl-4">
+                        <article class="info-card page-reveal" style="--reveal-delay: 0.24s;">
+                            <p class="card-kicker">Tools</p>
+                            <h2>Languages and systems tools</h2>
+                            <div class="stack-list mt-3" aria-label="Technical tools">
+                                <span class="tag-pill">C</span>
+                                <span class="tag-pill">C++</span>
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">SQL</span>
+                                <span class="tag-pill">Git</span>
+                                <span class="tag-pill">Make</span>
+                                <span class="tag-pill">SQLite</span>
+                                <span class="tag-pill">Bash</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto">
+        <div class="container footer-bar">
+            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr.</p>
+
+            <div class="footer-links" aria-label="External links">
+                <a class="footer-link" href="mailto:ddipietro8227@gmail.com" aria-label="Send Daniel an email">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+                <a class="footer-link" href="https://github.com/dcdjr" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's GitHub profile in a new tab">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <a class="footer-link" href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's LinkedIn profile in a new tab">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+====================================================================================================
+FILE: projects.html
+SIZE: 19195 bytes
+====================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Selected projects by Daniel DiPietro Jr. across systems programming, networking, infrastructure, and security.">
+    <meta name="theme-color" content="#f7f7f4">
+    <title>Projects | Daniel DiPietro Jr.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="assets/CSS/styles.css" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/JS/scripts.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Primary navigation">
+            <div class="container">
+                <a class="navbar-brand brand-mark" href="index.html">
+                    <span class="brand-badge" aria-hidden="true">DD</span>
+                    <span class="brand-text">Daniel DiPietro Jr.</span>
+                </a>
+
+                <div class="d-flex align-items-center gap-2 order-lg-2">
+                    <button class="btn theme-toggle" id="dark-mode-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                        <i id="themeIcon" class="bi bi-moon-stars" aria-hidden="true"></i>
+                        <span class="visually-hidden">Toggle color theme</span>
+                    </button>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-end order-lg-1" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="connect.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="site-main flex-grow-1">
+        <div class="container page-shell">
+            <section class="hero-panel page-reveal" aria-labelledby="projects-title">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <p class="eyebrow">Projects</p>
+                        <h1 id="projects-title" class="hero-title">Projects in C, C++, Python, and infrastructure tooling.</h1>
+                        <p class="hero-copy">
+                            Most of my project work is hands-on systems and networking work, with an emphasis on implementation details, concurrency, and practical utility.
+                        </p>
+
+                        <div class="hero-pills" aria-label="Project themes">
+                            <span class="tag-pill">Systems</span>
+                            <span class="tag-pill">Networking</span>
+                            <span class="tag-pill">Linux</span>
+                            <span class="tag-pill">Security</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="stat-card">
+                            <p class="stat-label">Project style</p>
+                            <h2>Implementation-driven</h2>
+                            <p class="mb-0">The common thread is low-level problem solving, clear system behavior, and software that does real work.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-block" aria-labelledby="featured-projects-title">
+                <div class="mb-4 page-reveal" style="--reveal-delay: 0.08s;">
+                    <h2 id="featured-projects-title" class="section-heading">Selected Projects</h2>
+                    <p class="section-intro">
+                        A representative set of systems, networking, web, and infrastructure projects.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.12s;">
+                            <div>
+                                <p class="card-kicker">C++ / POSIX</p>
+                                <h2 class="project-title">HTTP Server</h2>
+                            </div>
+                            <p class="project-copy">Multithreaded HTTP/1.1 server in C++ built with POSIX sockets.</p>
+                            <ul class="project-points">
+                                <li>Implements request parsing, static file serving, MIME type detection, and robust error handling.</li>
+                                <li>Builds concurrent client handling and standards-compliant HTTP response generation over raw TCP sockets.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">C++</span>
+                                <span class="tag-pill">POSIX</span>
+                                <span class="tag-pill">Sockets</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/cpp-http-server" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View HTTP Server source code on GitHub in a new tab">View Code</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.16s;">
+                            <div>
+                                <p class="card-kicker">C / Unix</p>
+                                <h2 class="project-title">Minimal Unix Shell</h2>
+                            </div>
+                            <p class="project-copy">Modular Unix shell in C with fork/exec-based process execution, built-in commands, and signal handling.</p>
+                            <ul class="project-points">
+                                <li>Implements command parsing, process execution, and built-ins such as <code>cd</code> and <code>exit</code>.</li>
+                                <li>Organizes the codebase around separation of concerns, defensive error handling, and maintainable systems-level design.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">C</span>
+                                <span class="tag-pill">POSIX</span>
+                                <span class="tag-pill">Signals</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/c-mini-shell" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Minimal Unix Shell source code on GitHub in a new tab">View Code</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.2s;">
+                            <div>
+                                <p class="card-kicker">C / Windows</p>
+                                <h2 class="project-title">Port Scanner</h2>
+                            </div>
+                            <p class="project-copy">Multithreaded TCP port scanner for Windows built with Winsock2.</p>
+                            <ul class="project-points">
+                                <li>Implements concurrent connection attempts, banner grabbing, and timeout-based scanning.</li>
+                                <li>Uses low-level socket logic to identify exposed services and evaluate network attack surface.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">C</span>
+                                <span class="tag-pill">Winsock2</span>
+                                <span class="tag-pill">Networking</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/port-scanner" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Port Scanner source code on GitHub in a new tab">View Code</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.24s;">
+                            <div>
+                                <p class="card-kicker">Python / Flask</p>
+                                <h2 class="project-title">Password50</h2>
+                            </div>
+                            <p class="project-copy">Password management web application with encrypted storage and session-based authentication.</p>
+                            <ul class="project-points">
+                                <li>Supports credential creation, editing, deletion, and encrypted storage using Fernet.</li>
+                                <li>Implements Flask routing, SQL CRUD operations, and a Bootstrap interface for credential management.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">Python</span>
+                                <span class="tag-pill">Flask</span>
+                                <span class="tag-pill">SQLite</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/password50" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Password50 source code on GitHub in a new tab">View Code</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.28s;">
+                            <div>
+                                <p class="card-kicker">Infrastructure / Linux</p>
+                                <h2 class="project-title">Home Lab Server</h2>
+                            </div>
+                            <p class="project-copy">Self-hosted Ubuntu Server environment with secure remote access and ongoing administration.</p>
+                            <ul class="project-points">
+                                <li>Built and administered a system with roughly 3TB of storage, including OS installation and server configuration.</li>
+                                <li>Configured Tailscale-based remote access for private connectivity and cross-device administration.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">Ubuntu Server</span>
+                                <span class="tag-pill">Tailscale</span>
+                                <span class="tag-pill">Self-Hosted</span>
+                            </div>
+                            <div class="project-actions">
+                                <span class="project-status">Ongoing build</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.32s;">
+                            <div>
+                                <p class="card-kicker">Hackathon / AI</p>
+                                <h2 class="project-title">Gemini AI Toolkit</h2>
+                            </div>
+                            <p class="project-copy">AI-assisted math web application built during an eight-hour mini-hackathon.</p>
+                            <ul class="project-points">
+                                <li>Uses the Gemini API, Wolfram Alpha, and Desmos in a single workflow for math problem solving.</li>
+                                <li>Built under tight time constraints with a focus on practical integration and usability.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Technologies used">
+                                <span class="tag-pill">Gemini API</span>
+                                <span class="tag-pill">Wolfram Alpha</span>
+                                <span class="tag-pill">Desmos</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/dcdjr/gemini-ai-toolkit" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="View Gemini AI Toolkit source code on GitHub in a new tab">View Code</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.36s;">
+                            <div class="project-heading">
+                                <div>
+                                    <p class="card-kicker">Work in Progress</p>
+                                    <h2 class="project-title">HiveCore</h2>
+                                </div>
+                                <span class="project-state">WIP</span>
+                            </div>
+                            <p class="project-copy">A project currently under active development, with details to be published as the build matures.</p>
+                            <ul class="project-points">
+                                <li>Core structure and feature set are still being refined.</li>
+                                <li>A fuller technical breakdown and public links will be added once the project is ready to share.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Project status">
+                                <span class="tag-pill">In Progress</span>
+                                <span class="tag-pill">WIP</span>
+                            </div>
+                            <div class="project-actions">
+                                <span class="project-status">Details coming soon</span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="project-card page-reveal" style="--reveal-delay: 0.4s;">
+                            <div class="project-heading">
+                                <div>
+                                    <p class="card-kicker">Work in Progress</p>
+                                    <h2 class="project-title">tcom</h2>
+                                </div>
+                                <span class="project-state">WIP</span>
+                            </div>
+                            <p class="project-copy">A project currently in progress, with the public-facing overview still being finalized.</p>
+                            <ul class="project-points">
+                                <li>Implementation is actively underway, with the current scope still evolving.</li>
+                                <li>Additional notes, screenshots, and repository details will be added when it is ready for release.</li>
+                            </ul>
+                            <div class="project-meta" aria-label="Project status">
+                                <span class="tag-pill">In Progress</span>
+                                <span class="tag-pill">WIP</span>
+                            </div>
+                            <div class="project-actions">
+                                <span class="project-status">Details coming soon</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-auto">
+        <div class="container footer-bar">
+            <p class="footer-copy">&copy; <span data-current-year>2026</span> Daniel DiPietro Jr.</p>
+
+            <div class="footer-links" aria-label="External links">
+                <a class="footer-link" href="mailto:ddipietro8227@gmail.com" aria-label="Send Daniel an email">
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+                <a class="footer-link" href="https://github.com/dcdjr" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's GitHub profile in a new tab">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <a class="footer-link" href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener noreferrer" aria-label="Open Daniel's LinkedIn profile in a new tab">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+====================================================================================================
+FILE: README.md
+SIZE: 1393 bytes
+====================================================================================================
+# Portfolio Site
+
+A polished, accessible personal portfolio site for me, built as a static GitHub Pages project with HTML, CSS, JavaScript, and Bootstrap.
+
+Live site: [dcdjr.me](https://dcdjr.me)
+
+## Highlights
+
+- Responsive four-page portfolio experience
+- Custom visual system layered on top of Bootstrap
+- Light and dark theme toggle with saved preference
+- Accessible navigation, skip links, focus states, and reduced-motion support
+- Refined project, about, and contact sections with stronger content hierarchy
+
+## Pages
+
+- `index.html` - landing page and portfolio overview
+- `about.html` - background, interests, and working style
+- `projects.html` - selected projects and GitHub links
+- `connect.html` - email, social links, and resume access
+
+## Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Bootstrap Icons
+
+## Project Structure
+
+```text
+.
+|-- about.html
+|-- connect.html
+|-- index.html
+|-- projects.html
+`-- assets
+    |-- CSS/styles.css
+    |-- JS/scripts.js
+    `-- images/
+```
+
+## Local Development
+
+No build step is required.
+
+1. Clone the repository.
+2. Start a static server from the project root:
+
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+3. Open [http://localhost:8000](http://localhost:8000) in your browser.
+
+## Deployment
+
+The site is set up for GitHub Pages and uses the custom domain `dcdjr.me`.
+
+
+====================================================================================================
+FILE: repo_dump.py
+SIZE: 5460 bytes
+====================================================================================================
+from __future__ import annotations
+
+import argparse
+import fnmatch
+from pathlib import Path
+
+DEFAULT_EXCLUDE_DIRS = {
+    ".git",
+    ".hg",
+    ".svn",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "node_modules",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".tox",
+    "dist",
+    "build",
+    ".next",
+    ".turbo",
+    ".idea",
+    ".vscode",
+    "target",
+    "out",
+    ".DS_Store",
+}
+
+DEFAULT_EXCLUDE_FILES = {
+    "*.pyc",
+    "*.pyo",
+    "*.so",
+    "*.dll",
+    "*.dylib",
+    "*.exe",
+    "*.class",
+    "*.jar",
+    "*.zip",
+    "*.tar",
+    "*.gz",
+    "*.7z",
+    "*.rar",
+    "*.pdf",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.webp",
+    "*.ico",
+    "*.mp4",
+    "*.mp3",
+    "*.wav",
+    "*.ttf",
+    "*.otf",
+    "*.woff",
+    "*.woff2",
+    "*.lock",
+}
+
+TEXT_EXTENSIONS = {
+    ".py", ".js", ".ts", ".tsx", ".jsx", ".java", ".c", ".h", ".cpp", ".hpp",
+    ".rs", ".go", ".rb", ".php", ".swift", ".kt", ".kts", ".scala", ".sh",
+    ".bash", ".zsh", ".fish", ".ps1", ".sql", ".html", ".htm", ".css", ".scss",
+    ".json", ".jsonc", ".yaml", ".yml", ".toml", ".ini", ".cfg", ".conf",
+    ".env", ".md", ".txt", ".rst", ".xml", ".dockerfile", ".gitignore",
+    ".gitattributes", ".editorconfig", ".makefile",
+}
+
+def is_probably_binary(path: Path, sample_size: int = 4096) -> bool:
+    try:
+        with path.open("rb") as f:
+            chunk = f.read(sample_size)
+        if b"\x00" in chunk:
+            return True
+        if not chunk:
+            return False
+        # crude heuristic: if too many non-text bytes, treat as binary
+        text_chars = bytearray({7, 8, 9, 10, 12, 13, 27} | set(range(32, 127)))
+        nontext = sum(byte not in text_chars for byte in chunk)
+        return (nontext / len(chunk)) > 0.30
+    except Exception:
+        return True
+
+def matches_any_pattern(name: str, patterns: set[str]) -> bool:
+    return any(fnmatch.fnmatch(name, pattern) for pattern in patterns)
+
+def should_skip(path: Path, root: Path, exclude_dirs: set[str], exclude_files: set[str]) -> bool:
+    rel = path.relative_to(root)
+
+    for part in rel.parts:
+        if part in exclude_dirs:
+            return True
+
+    if path.is_file():
+        if path.name in exclude_dirs:
+            return True
+        if matches_any_pattern(path.name, exclude_files):
+            return True
+
+    return False
+
+def collect_files(root: Path, exclude_dirs: set[str], exclude_files: set[str]) -> list[Path]:
+    files: list[Path] = []
+
+    for path in root.rglob("*"):
+        if should_skip(path, root, exclude_dirs, exclude_files):
+            continue
+        if path.is_file():
+            files.append(path)
+
+    files.sort(key=lambda p: str(p.relative_to(root)).lower())
+    return files
+
+def dump_repo(root: Path, output_file: Path, max_file_bytes: int) -> None:
+    exclude_dirs = set(DEFAULT_EXCLUDE_DIRS)
+    exclude_files = set(DEFAULT_EXCLUDE_FILES)
+
+    files = collect_files(root, exclude_dirs, exclude_files)
+
+    with output_file.open("w", encoding="utf-8", errors="replace") as out:
+        out.write(f"REPOSITORY DUMP\n")
+        out.write(f"ROOT: {root.resolve()}\n")
+        out.write(f"TOTAL FILES: {len(files)}\n")
+        out.write("=" * 100 + "\n\n")
+
+        for file_path in files:
+            rel = file_path.relative_to(root)
+
+            try:
+                size = file_path.stat().st_size
+            except OSError:
+                continue
+
+            likely_text = (
+                file_path.suffix.lower() in TEXT_EXTENSIONS
+                or file_path.name in {"Makefile", "Dockerfile", "LICENSE", "README"}
+            )
+
+            if not likely_text and is_probably_binary(file_path):
+                continue
+
+            out.write("=" * 100 + "\n")
+            out.write(f"FILE: {rel}\n")
+            out.write(f"SIZE: {size} bytes\n")
+            out.write("=" * 100 + "\n")
+
+            try:
+                with file_path.open("r", encoding="utf-8", errors="replace") as f:
+                    if size > max_file_bytes:
+                        content = f.read(max_file_bytes)
+                        out.write(content)
+                        out.write(
+                            f"\n\n[TRUNCATED: file exceeded {max_file_bytes} bytes]\n\n"
+                        )
+                    else:
+                        out.write(f.read())
+            except Exception as e:
+                out.write(f"[ERROR READING FILE: {e}]\n")
+
+            out.write("\n\n")
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Dump a repository's text files into one .txt file."
+    )
+    parser.add_argument(
+        "repo",
+        nargs="?",
+        default=".",
+        help="Path to the repository root (default: current directory)",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="repo_dump.txt",
+        help="Output txt file (default: repo_dump.txt)",
+    )
+    parser.add_argument(
+        "--max-file-bytes",
+        type=int,
+        default=200_000,
+        help="Max bytes to include per file before truncating (default: 200000)",
+    )
+
+    args = parser.parse_args()
+
+    root = Path(args.repo).resolve()
+    output_file = Path(args.output).resolve()
+
+    if not root.exists() or not root.is_dir():
+        raise SystemExit(f"Invalid repo path: {root}")
+
+    dump_repo(root, output_file, args.max_file_bytes)
+    print(f"Repo dump written to: {output_file}")
+
+if __name__ == "__main__":
+    main()
+
+

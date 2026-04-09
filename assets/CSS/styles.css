@@ -295,6 +295,13 @@ a:hover {
     margin-top: 1.45rem;
 }
 
+.hero-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 9.5rem;
+}
+
 .btn {
     border-radius: 999px;
     font-weight: 800;
@@ -318,6 +325,19 @@ a:hover {
     background: var(--heading);
     color: var(--bg);
     filter: brightness(1.02);
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: var(--heading);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus-visible {
+    border-color: var(--heading);
+    background: var(--brand-soft);
+    color: var(--heading);
 }
 
 .hero-stats {
@@ -524,18 +544,6 @@ a:hover {
 
 .project-actions {
     margin-top: auto;
-}
-
-.project-status {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.72rem 1rem;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: var(--surface-strong);
-    color: var(--heading);
-    font-weight: 700;
-    line-height: 1;
 }
 
 .contact-card {
