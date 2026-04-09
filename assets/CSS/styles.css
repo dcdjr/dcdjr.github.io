@@ -320,31 +320,6 @@ a:hover {
     filter: brightness(1.02);
 }
 
-.btn-outline-primary {
-    border-color: var(--line-strong);
-    background: transparent;
-    color: var(--heading);
-}
-
-.btn-outline-primary:hover,
-.btn-outline-primary:focus-visible {
-    border-color: var(--heading);
-    background: var(--surface-strong);
-    color: var(--heading);
-}
-
-.btn-ghost {
-    padding-inline: 0.25rem;
-    border-color: transparent;
-    color: var(--heading);
-}
-
-.btn-ghost:hover,
-.btn-ghost:focus-visible {
-    box-shadow: none;
-    color: var(--brand-strong);
-}
-
 .hero-stats {
     margin-top: 1.6rem;
 }
@@ -488,8 +463,31 @@ a:hover {
     gap: 1rem;
 }
 
+.project-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.9rem;
+}
+
 .project-title {
     margin-bottom: 0.5rem;
+}
+
+.project-state {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.72rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--brand-soft);
+    color: var(--heading);
+    font-family: "IBM Plex Mono", "Segoe UI", monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .project-copy {
@@ -526,6 +524,18 @@ a:hover {
 
 .project-actions {
     margin-top: auto;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.72rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-strong);
+    color: var(--heading);
+    font-weight: 700;
+    line-height: 1;
 }
 
 .contact-card {
@@ -743,6 +753,11 @@ a:hover {
     .project-actions {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .project-heading {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-links {
