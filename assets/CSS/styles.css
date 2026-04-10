@@ -514,6 +514,17 @@ a:hover {
     margin-bottom: 0;
 }
 
+.project-note {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.project-note span {
+    color: var(--heading);
+    font-weight: 700;
+}
+
 .project-points {
     display: grid;
     gap: 0.7rem;
