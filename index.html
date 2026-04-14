@@ -31,7 +31,11 @@
 
     /* ─── Reset ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 5rem; /* Prevents anchor links hiding under nav */
+    }
 
     body {
       background: var(--bg);
@@ -40,6 +44,16 @@
       font-size: 1rem;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    *:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
     }
 
     a { color: inherit; }
@@ -69,7 +83,7 @@
       height: 54px;
       background: rgba(12,12,12,0.88);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.03), 0 4px 24px rgba(0,0,0,0.4);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -83,7 +97,9 @@
       color: var(--text);
       text-decoration: none;
       letter-spacing: 0.02em;
+      transition: opacity 0.2s;
     }
+    .nav-logo:hover { opacity: 0.8; }
 
     .nav-links {
       display: flex;
@@ -213,7 +229,7 @@
       padding: 0.65em 1.35em;
       border-radius: var(--radius);
       text-decoration: none;
-      transition: all 0.18s;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       letter-spacing: 0.03em;
       border: 1px solid transparent;
       cursor: pointer;
@@ -224,10 +240,13 @@
       color: #000;
       font-weight: 500;
       border-color: var(--accent);
+      box-shadow: 0 4px 14px var(--accent-dim);
     }
     .btn-primary:hover {
       background: #fbbf24;
       border-color: #fbbf24;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--accent-glow);
     }
 
     .btn-ghost {
@@ -239,6 +258,7 @@
       color: var(--text);
       border-color: var(--border-mid);
       background: var(--surface-2);
+      transform: translateY(-2px);
     }
 
     /* ─── About ───────────────────────────────────────────── */
@@ -362,12 +382,13 @@
       border: 1px solid var(--border-mid);
       border-radius: var(--radius);
       background: var(--surface);
-      transition: all 0.15s;
+      transition: all 0.2s;
       flex-shrink: 0;
     }
     .project-link:hover {
       color: var(--accent);
       border-color: var(--accent-glow);
+      transform: translateY(-1px);
     }
 
     /* ─── Experience ──────────────────────────────────────── */
@@ -471,12 +492,15 @@
     }
 
     .contact-email {
-      display: block;
+      display: inline-block;
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.83rem;
       color: var(--dim);
+      text-decoration: none;
       margin-bottom: 2rem;
+      transition: color 0.2s;
     }
+    .contact-email:hover { color: var(--text); }
 
     .contact-links {
       display: flex;
@@ -864,7 +888,7 @@
       <p class="section-label" style="justify-content:center;">// 05 — Contact</p>
       <h2 class="contact-heading">Let's talk.</h2>
       <p class="contact-sub">I'm interested in internships, research, and technical work where systems, security, or low-level software are involved.</p>
-      <span class="contact-email">ddipietro8227 [at] gmail [dot] com</span>
+      <a href="mailto:ddipietro8227@gmail.com" class="contact-email">ddipietro8227 [at] gmail [dot] com</a>
       <div class="contact-links">
         <a href="https://github.com/dcdjr" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
         <a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
@@ -875,7 +899,7 @@
   </main>
 
   <footer>
-    <span class="footer-copy">© 2025 Daniel DiPietro Jr.</span>
+    <span class="footer-copy">© 2026 Daniel DiPietro Jr.</span>
     <div class="footer-links">
       <a href="https://github.com/dcdjr" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener">LinkedIn</a>
