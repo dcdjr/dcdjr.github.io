@@ -58,6 +58,12 @@
 
     a { color: inherit; }
 
+    h1, h2, h3 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.15;
+      letter-spacing: normal;
+    }
+
     /* ─── Skip link ─────────────────────────────────────── */
     .skip-link {
       position: absolute;
@@ -172,11 +178,11 @@
     }
 
     .hero-name {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: clamp(2.15rem, 6vw, 4.5rem);
       font-weight: 800;
       line-height: 1.1;
-      letter-spacing: 0.01em;
+      letter-spacing: normal;
       color: var(--text);
       margin-bottom: 1.5rem;
     }
@@ -391,7 +397,7 @@
       transform: translateY(-1px);
     }
 
-    /* ─── Experience ──────────────────────────────────────── */
+    /* ─── Experience + Competitions ───────────────────────── */
     .exp-list {
       display: flex;
       flex-direction: column;
@@ -473,11 +479,11 @@
     }
 
     .contact-heading {
-      font-family: 'Syne', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 800;
       line-height: 1.1;
-      letter-spacing: 0.01em;
+      letter-spacing: normal;
       color: var(--text);
       margin-bottom: 0.75rem;
     }
@@ -576,7 +582,9 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#competitions">Competitions</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="static/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
     </ul>
   </nav>
 
@@ -586,8 +594,7 @@
       <p class="hero-eyebrow">Cybersecurity · Computer Science</p>
 
       <h1 class="hero-name">
-        I build to<br>
-        understand.
+        Computer Science student focused on systems programming, cybersecurity, and software engineering.
       </h1>
 
       <p class="hero-bio">
@@ -603,13 +610,15 @@
         <span class="pill">Schilling Scholar · Honors College</span>
         <span class="pill">NCL Top 12.5%</span>
         <span class="pill">NCAE Cyber Games</span>
-        <span class="pill">FidHacks 2026</span>
+        <span class="pill">FishHacks 2026</span>
       </div>
 
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">See Projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        <a href="mailto:ddipietro8227@gmail.com" class="btn btn-ghost">Get in Touch</a>
+        <a href="static/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume ↓</a>
         <a href="https://github.com/dcdjr" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+        <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
       </div>
     </section>
 
@@ -798,19 +807,26 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <section id="competitions">
+      <p class="section-label">// 04 — Organizations &amp; Competitions</p>
+      <div class="exp-list">
+
         <div class="exp-item">
           <span class="exp-time">Current</span>
           <div>
-            <p class="exp-role">Technical Content Lead</p>
-            <p class="exp-org">URI Cyber Club</p>
-            <p class="exp-desc">Create and organize technical security content, exercises, and learning material for club members.</p>
+            <p class="exp-role">Role / Member</p>
+            <p class="exp-org">URI Cyber Security Club</p>
+            <p class="exp-desc">Work with practical security labs, Linux infrastructure, networking tools, and club exercises focused on hands-on cybersecurity fundamentals.</p>
           </div>
         </div>
 
         <div class="exp-item">
           <span class="exp-time">2026</span>
           <div>
-            <p class="exp-role">Competitor — Top 12.5% nationally</p>
+            <p class="exp-role">Rank / Score — Top 12.5% nationally</p>
             <p class="exp-org">National Cyber League</p>
             <p class="exp-desc">Competed individually across cryptography, network analysis, forensics, log analysis, and exploitation challenges.</p>
           </div>
@@ -819,17 +835,18 @@
         <div class="exp-item">
           <span class="exp-time">2026</span>
           <div>
-            <p class="exp-role">Competitor</p>
+            <p class="exp-role">Role / Team Competitor</p>
             <p class="exp-org">NCAE Cyber Games</p>
-            <p class="exp-desc">Competed in a team-based cybersecurity event centered on practical defensive and incident-response scenarios.</p>
+            <p class="exp-desc">Collaborated on team defense, service hardening, infrastructure monitoring, and incident-response tasks in a practical cyber competition environment.</p>
           </div>
         </div>
 
         <div class="exp-item">
           <span class="exp-time">2026</span>
           <div>
-            <p class="exp-role">Participant — Accepted</p>
-            <p class="exp-org">FidHacks 2026</p>
+            <p class="exp-role">Project Built / Hackathon Participant</p>
+            <p class="exp-org">FishHacks</p>
+            <p class="exp-desc">Built a collaborative hackathon project using modern web technologies, version control, and rapid prototyping workflows.</p>
           </div>
         </div>
 
@@ -837,7 +854,7 @@
     </section>
 
     <section id="skills">
-      <p class="section-label">// 04 — Skills</p>
+      <p class="section-label">// 05 — Skills</p>
       <div class="skills-grid">
 
         <div>
@@ -885,14 +902,14 @@
     </section>
 
     <section id="contact">
-      <p class="section-label" style="justify-content:center;">// 05 — Contact</p>
+      <p class="section-label" style="justify-content:center;">// 06 — Contact</p>
       <h2 class="contact-heading">Let's talk.</h2>
       <p class="contact-sub">I'm interested in internships, research, and technical work where systems, security, or low-level software are involved.</p>
       <a href="mailto:ddipietro8227@gmail.com" class="contact-email">ddipietro8227 [at] gmail [dot] com</a>
       <div class="contact-links">
         <a href="https://github.com/dcdjr" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-        <a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-        <a href="https://docs.google.com/document/d/1YNH7DZGvcy2bwyhbGXe8ezDIzR7I3bxUn3yWy0t9g8Q/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
+        <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="static/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
       </div>
     </section>
 
@@ -902,7 +919,8 @@
     <span class="footer-copy">© 2026 Daniel DiPietro Jr.</span>
     <div class="footer-links">
       <a href="https://github.com/dcdjr" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/daniel-dipietro-jr/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:ddipietro8227@gmail.com">Email</a>
     </div>
   </footer>
 
