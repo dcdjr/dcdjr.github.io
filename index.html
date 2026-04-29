@@ -1,892 +1,1057 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DJ DiPietro — CS student at URI focused on systems programming, networking, and cybersecurity.">
-  <title>Daniel (DJ) DiPietro Jr.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="DJ DiPietro — CS student at URI focused on systems programming, networking, and cybersecurity.">
+    <title>Daniel (DJ) DiPietro Jr.</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Figtree:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-  <style>
-    /* ─── Variables ─────────────────────────────────────── */
-    :root {
-      --bg:           #0c0c0c;
-      --surface:      #141414;
-      --surface-2:    #1d1d1d;
-      --border:       #252525;
-      --border-mid:   #333;
-      --text:         #e2e2e2;
-      --muted:        #737373;
-      --dim:          #444;
-      --accent:       #f59e0b;
-      --accent-dim:   rgba(245,158,11,0.10);
-      --accent-glow:  rgba(245,158,11,0.22);
-      --radius:       3px;
-      --max-w:        820px;
-      --pad-x:        clamp(1.25rem, 5vw, 3rem);
-    }
+    <style>
+        /* ─── Variables ─────────────────────────────────────── */
+        :root {
+            --bg: #0c0c0c;
+            --surface: #141414;
+            --surface-2: #1d1d1d;
+            --border: #252525;
+            --border-mid: #333;
+            --text: #e2e2e2;
+            --muted: #737373;
+            --dim: #6f6f6f;
+            --accent: #f59e0b;
+            --accent-dim: rgba(245, 158, 11, 0.10);
+            --accent-glow: rgba(245, 158, 11, 0.22);
+            --radius: 3px;
+            --max-w: 920px;
+            --pad-x: clamp(1.25rem, 5vw, 3rem);
+        }
 
-    /* ─── Reset ─────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    html { 
-      scroll-behavior: smooth; 
-      scroll-padding-top: 5rem; /* Prevents anchor links hiding under nav */
-    }
+        /* ─── Reset ─────────────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Figtree', sans-serif;
-      font-size: 1rem;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+            /* Prevents anchor links hiding under nav */
+        }
 
-    ::selection {
-      background: var(--accent-dim);
-      color: var(--accent);
-    }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Figtree', sans-serif;
+            font-size: 1rem;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    *:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
+        ::selection {
+            background: var(--accent-dim);
+            color: var(--accent);
+        }
 
-    a { color: inherit; }
+        *:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
 
-    h1, h2, h3 {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.15;
-      letter-spacing: normal;
-    }
+        a {
+            color: inherit;
+        }
 
-    /* ─── Skip link ─────────────────────────────────────── */
-    .skip-link {
-      position: absolute;
-      top: -60px;
-      left: 1rem;
-      background: var(--accent);
-      color: #000;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radius);
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.78rem;
-      text-decoration: none;
-      z-index: 999;
-      transition: top 0.15s;
-    }
-    .skip-link:focus { top: 0.75rem; }
+        h1,
+        h2,
+        h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.15;
+            letter-spacing: normal;
+        }
 
-    /* ─── Nav ────────────────────────────────────────────── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      height: 54px;
-      background: rgba(12,12,12,0.88);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 1px 0 rgba(255,255,255,0.03), 0 4px 24px rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 var(--pad-x);
-    }
+        /* ─── Skip link ─────────────────────────────────────── */
+        .skip-link {
+            position: absolute;
+            top: -60px;
+            left: 1rem;
+            background: var(--accent);
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.78rem;
+            text-decoration: none;
+            z-index: 999;
+            transition: top 0.15s;
+        }
 
-    .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: opacity 0.2s;
-    }
-    .nav-logo:hover { opacity: 0.8; }
+        .skip-link:focus {
+            top: 0.75rem;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+        /* ─── Nav ────────────────────────────────────────────── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            height: 54px;
+            background: rgba(12, 12, 12, 0.88);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 4px 24px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 var(--pad-x);
+        }
 
-    .nav-links a {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-    .nav-links a:hover { color: var(--text); }
+        .nav-logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: opacity 0.2s;
+        }
 
-    /* ─── Wrapper ────────────────────────────────────────── */
-    main {
-      padding-top: 54px;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding-left: var(--pad-x);
-      padding-right: var(--pad-x);
-    }
+        .nav-logo:hover {
+            opacity: 0.8;
+        }
 
-    /* ─── Sections ───────────────────────────────────────── */
-    section {
-      padding: 5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    section:last-of-type { border-bottom: none; }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
 
-    /* Section marker  // 01 — Label */
-    .section-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--accent);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .section-label::after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 2.5rem;
-      background: var(--accent-glow);
-    }
+        .nav-links a {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
 
-    /* ─── Hero ───────────────────────────────────────────── */
-    #hero {
-      padding-top: 7rem;
-      padding-bottom: 6rem;
-      min-height: calc(100vh - 54px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+        .nav-links a:hover {
+            color: var(--text);
+        }
 
-    .hero-eyebrow {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
+        /* ─── Wrapper ────────────────────────────────────────── */
+        main {
+            padding-top: 54px;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding-left: var(--pad-x);
+            padding-right: var(--pad-x);
+        }
 
-    .hero-name {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: clamp(2.15rem, 6vw, 4.5rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: normal;
-      color: var(--text);
-      margin-bottom: 1.5rem;
-    }
+        /* ─── Sections ───────────────────────────────────────── */
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
 
-    .hero-name span {
-      color: var(--accent);
-    }
+        section:last-of-type {
+            border-bottom: none;
+        }
 
-    .hero-bio {
-      max-width: 58ch;
-      font-size: 1.05rem;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
+        /* Section marker  // 01 — Label */
+        .section-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
 
-    .hero-bio strong {
-      color: var(--text);
-      font-weight: 600;
-    }
+        .section-label::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 2.5rem;
+            background: var(--accent-glow);
+        }
 
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 2.75rem;
-    }
+        /* ─── Hero ───────────────────────────────────────────── */
+        #hero {
+            padding-top: 7rem;
+            padding-bottom: 6rem;
+            min-height: calc(100vh - 54px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    .pill {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      padding: 0.3em 0.75em;
-      border: 1px solid var(--border-mid);
-      border-radius: var(--radius);
-      color: var(--dim);
-      background: var(--surface);
-      letter-spacing: 0.03em;
-    }
+        .hero-eyebrow {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
 
-    .hero-cta {
-      display: flex;
-      gap: 0.50rem;
-      flex-wrap: wrap;
-    }
+        .hero-name {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: clamp(2.15rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: normal;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
 
-    /* ─── Buttons ─────────────────────────────────────────── */
-    .btn {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.78rem;
-      padding: 0.65em 1.35em;
-      border-radius: var(--radius);
-      text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      letter-spacing: 0.03em;
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
+        .hero-name span {
+            color: var(--accent);
+        }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #000;
-      font-weight: 500;
-      border-color: var(--accent);
-      box-shadow: 0 4px 14px var(--accent-dim);
-    }
-    .btn-primary:hover {
-      background: #fbbf24;
-      border-color: #fbbf24;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px var(--accent-glow);
-    }
+        .hero-bio {
+            max-width: 58ch;
+            font-size: 1.05rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
 
-    .btn-ghost {
-      background: transparent;
-      color: var(--muted);
-      border-color: var(--border-mid);
-    }
-    .btn-ghost:hover {
-      color: var(--text);
-      border-color: var(--border-mid);
-      background: var(--surface-2);
-      transform: translateY(-2px);
-    }
+        .hero-bio strong {
+            color: var(--text);
+            font-weight: 600;
+        }
 
-    /* ─── About ───────────────────────────────────────────── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-bottom: 2.75rem;
+        }
 
-    .about-text {
-      font-size: 0.97rem;
-      color: var(--muted);
-      line-height: 1.95;
-    }
-    .about-text p + p { margin-top: 1rem; }
-    .about-text strong { color: var(--text); font-weight: 600; }
+        .pill {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            padding: 0.3em 0.75em;
+            border: 1px solid var(--border-mid);
+            border-radius: var(--radius);
+            color: var(--muted);
+            background: var(--surface);
+            letter-spacing: 0.03em;
+        }
 
-    .about-details {
-      display: flex;
-      flex-direction: column;
-      gap: 1.15rem;
-    }
+        .hero-cta {
+            display: flex;
+            gap: 0.50rem;
+            flex-wrap: wrap;
+        }
 
-    .detail-item {}
-    .detail-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.63rem;
-      color: var(--dim);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-    .detail-value {
-      font-size: 0.92rem;
-      color: var(--text);
-      font-weight: 500;
-    }
+        /* ─── Buttons ─────────────────────────────────────────── */
+        .btn {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.78rem;
+            padding: 0.65em 1.35em;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.03em;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
 
-    /* ─── Projects ────────────────────────────────────────── */
-    .projects-list {
-      display: flex;
-      flex-direction: column;
-    }
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            font-weight: 500;
+            border-color: var(--accent);
+            box-shadow: 0 4px 14px var(--accent-dim);
+        }
 
-    .project-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 1.5rem;
-      align-items: start;
-      padding: 1.75rem 0;
-      border-top: 1px solid var(--border);
-      position: relative;
-      transition: background 0.15s;
-    }
-    .project-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
+        .btn-primary:hover {
+            background: #fbbf24;
+            border-color: #fbbf24;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
 
-    /* Amber left-edge stripe on hover */
-    .project-item::before {
-      content: '';
-      position: absolute;
-      left: calc(-1 * var(--pad-x));
-      top: 0; bottom: 0;
-      width: 2px;
-      background: transparent;
-      transition: background 0.2s;
-    }
-    .project-item:hover::before {
-      background: var(--accent);
-    }
+        .btn-ghost {
+            background: transparent;
+            color: var(--muted);
+            border-color: var(--border-mid);
+        }
 
-    .project-title-row {
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 0.45rem;
-    }
+        .btn-ghost:hover {
+            color: var(--text);
+            border-color: var(--border-mid);
+            background: var(--surface-2);
+            transform: translateY(-2px);
+        }
 
-    .project-name {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: 0.01em;
-    }
+        /* ─── About ───────────────────────────────────────────── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
 
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-    }
+        .about-text {
+            font-size: 0.97rem;
+            color: var(--muted);
+            line-height: 1.95;
+        }
 
-    .tag {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.62rem;
-      color: var(--muted);
-      padding: 0.18em 0.55em;
-      border: 1px solid var(--border);
-      border-radius: 2px;
-      background: var(--surface);
-    }
+        .about-text p+p {
+            margin-top: 1rem;
+        }
 
-    .project-desc {
-      font-size: 0.91rem;
-      color: var(--muted);
-      line-height: 1.7;
-      max-width: 68ch;
-    }
+        .about-text strong {
+            color: var(--text);
+            font-weight: 600;
+        }
 
-    .project-link {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.7rem;
-      color: var(--dim);
-      text-decoration: none;
-      white-space: nowrap;
-      padding: 0.35em 0.7em;
-      border: 1px solid var(--border-mid);
-      border-radius: var(--radius);
-      background: var(--surface);
-      transition: all 0.2s;
-      flex-shrink: 0;
-    }
-    .project-link:hover {
-      color: var(--accent);
-      border-color: var(--accent-glow);
-      transform: translateY(-1px);
-    }
+        .about-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.15rem;
+        }
 
-    /* ─── Experience + Competitions ───────────────────────── */
-    .exp-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2.25rem;
-    }
+        .detail-item {}
 
-    .exp-item {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 1.5rem;
-    }
+        .detail-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.63rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
 
-    .exp-time {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--dim);
-      padding-top: 0.2rem;
-      line-height: 1.4;
-    }
+        .detail-value {
+            font-size: 0.92rem;
+            color: var(--text);
+            font-weight: 500;
+        }
 
-    .exp-role {
-      font-weight: 600;
-      color: var(--text);
-      font-size: 0.95rem;
-      margin-bottom: 0.1rem;
-    }
-    .exp-org {
-      font-size: 0.84rem;
-      color: var(--muted);
-      margin-bottom: 0.35rem;
-    }
-    .exp-desc {
-      font-size: 0.84rem;
-      color: var(--dim);
-      line-height: 1.6;
-    }
+        /* ─── Projects ────────────────────────────────────────── */
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* ─── Skills ──────────────────────────────────────────── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.25rem 3rem;
-    }
+        .project-item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            align-items: start;
+            padding: 1.75rem 0;
+            border-top: 1px solid var(--border);
+            position: relative;
+            transition: background 0.15s;
+        }
 
-    .skill-label {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.63rem;
-      color: var(--dim);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 0.65rem;
-    }
+        .project-item:last-child {
+            border-bottom: 1px solid var(--border);
+        }
 
-    .skill-items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
+        /* Amber left-edge stripe on hover */
+        .project-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-1 * var(--pad-x));
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: transparent;
+            transition: background 0.2s;
+        }
 
-    .chip {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.73rem;
-      color: var(--text);
-      padding: 0.28em 0.65em;
-      border: 1px solid var(--border-mid);
-      border-radius: var(--radius);
-      background: var(--surface);
-    }
-    .chip.hi {
-      color: var(--accent);
-      border-color: var(--accent-glow);
-      background: var(--accent-dim);
-    }
+        .project-item:hover::before {
+            background: var(--accent);
+        }
 
-    /* ─── Contact ─────────────────────────────────────────── */
-    #contact {
-      text-align: center;
-      padding: 5rem 0 6rem;
-    }
+        .project-title-row {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 0.45rem;
+        }
 
-    .contact-heading {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: normal;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
+        .project-name {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: 0.01em;
+        }
 
-    .contact-sub {
-      font-size: 0.97rem;
-      color: var(--muted);
-      max-width: 48ch;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 0.4rem;
-    }
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
 
-    .contact-email {
-      display: inline-block;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.83rem;
-      color: var(--dim);
-      text-decoration: none;
-      margin-bottom: 2rem;
-      transition: color 0.2s;
-    }
-    .contact-email:hover { color: var(--text); }
+        .tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--muted);
+            padding: 0.18em 0.55em;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            background: var(--surface);
+        }
 
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
+        .project-desc {
+            font-size: 0.91rem;
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 68ch;
+        }
 
-    /* ─── Footer ──────────────────────────────────────────── */
-    footer {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 2rem var(--pad-x);
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        .project-link {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--dim);
+            text-decoration: none;
+            white-space: nowrap;
+            padding: 0.35em 0.7em;
+            border: 1px solid var(--border-mid);
+            border-radius: var(--radius);
+            background: var(--surface);
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
 
-    .footer-copy {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--dim);
-    }
+        .project-link:hover {
+            color: var(--accent);
+            border-color: var(--accent-glow);
+            transform: translateY(-1px);
+        }
 
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-    .footer-links a {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--dim);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-    .footer-links a:hover { color: var(--text); }
+        /* ─── Experience + Competitions ───────────────────────── */
+        .exp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.25rem;
+        }
 
-    /* ─── Animations ──────────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+        .exp-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 1.5rem;
+        }
 
-    #hero > * {
-      opacity: 0;
-      animation: fadeUp 0.5s ease forwards;
-    }
-    .hero-eyebrow  { animation-delay: 0.05s; }
-    .hero-name     { animation-delay: 0.15s; }
-    .hero-bio      { animation-delay: 0.25s; }
-    .hero-pills    { animation-delay: 0.33s; }
-    .hero-cta      { animation-delay: 0.40s; }
+        .exp-time {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--dim);
+            padding-top: 0.2rem;
+            line-height: 1.4;
+        }
 
-    /* ─── Responsive ──────────────────────────────────────── */
-    @media (max-width: 620px) {
-      .about-grid    { grid-template-columns: 1fr; gap: 2rem; }
-      .skills-grid   { grid-template-columns: 1fr; gap: 1.5rem; }
-      .exp-item      { grid-template-columns: 1fr; gap: 0.3rem; }
-      .project-item  { grid-template-columns: 1fr; }
-      .nav-links     { display: none; }
-      footer         { flex-direction: column; gap: 1rem; text-align: center; }
-    }
-  </style>
+        .exp-role {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .exp-org {
+            font-size: 0.84rem;
+            color: var(--muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .exp-desc {
+            font-size: 0.84rem;
+            color: var(--dim);
+            line-height: 1.6;
+        }
+
+        /* ─── Skills ──────────────────────────────────────────── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.25rem 3rem;
+        }
+
+        .skill-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.63rem;
+            color: var(--dim);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.65rem;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+        }
+
+        .chip {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.73rem;
+            color: var(--text);
+            padding: 0.28em 0.65em;
+            border: 1px solid var(--border-mid);
+            border-radius: var(--radius);
+            background: var(--surface);
+        }
+
+        .chip.hi {
+            color: var(--accent);
+            border-color: var(--accent-glow);
+            background: var(--accent-dim);
+        }
+
+        /* ─── Contact ─────────────────────────────────────────── */
+        #contact {
+            text-align: center;
+            padding: 5rem 0 6rem;
+        }
+
+        .contact-heading {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: normal;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-sub {
+            font-size: 0.97rem;
+            color: var(--muted);
+            max-width: 48ch;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.83rem;
+            color: var(--dim);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+
+        .contact-email:hover {
+            color: var(--text);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        /* ─── Footer ──────────────────────────────────────────── */
+        footer {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 2rem var(--pad-x);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--dim);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            color: var(--dim);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text);
+        }
+
+        /* ─── Animations ──────────────────────────────────────── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #hero>* {
+            opacity: 0;
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        .hero-eyebrow {
+            animation-delay: 0.05s;
+        }
+
+        .hero-name {
+            animation-delay: 0.15s;
+        }
+
+        .hero-bio {
+            animation-delay: 0.25s;
+        }
+
+        .hero-pills {
+            animation-delay: 0.33s;
+        }
+
+        .hero-cta {
+            animation-delay: 0.40s;
+        }
+
+        /* ─── Responsive ──────────────────────────────────────── */
+        @media (max-width: 620px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .exp-item {
+                grid-template-columns: 1fr;
+                gap: 0.3rem;
+            }
+
+            .project-item {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-  <nav>
-    <a class="nav-logo" href="#hero">Daniel (DJ) DiPietro Jr.</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#competitions">Competitions</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <a class="nav-logo" href="#hero">Daniel (DJ) DiPietro Jr.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#competitions">Competitions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <main id="main">
+    <main id="main">
 
-    <section id="hero">
-      <p class="hero-eyebrow">Cybersecurity · Software Engineering</p>
+        <section id="hero">
+            <p class="hero-eyebrow">Cybersecurity · Software Engineering · AI</p>
 
-      <h1 class="hero-name">
-        Computer Science student focused on cybersecurity and software engineering.
-      </h1>
+            <h1 class="hero-name">
+                Computer Science student building systems, security, and practical software projects.
+            </h1>
 
-      <p class="hero-bio">
-        I'm a CS student at URI focused on systems programming, networking, and cybersecurity. I mainly
-        build in C/C++ with some interest in Python. I enjoy building projects like shells, emulators,
-        HTTP servers, and networking tools because I like learning about what happens underneath the
-        abstractions.
-      </p>
-
-      <div class="hero-pills">
-        <span class="pill">URI · CS + Data Science Minor</span>
-        <span class="pill">4.0 GPA</span>
-        <span class="pill">Schilling Scholar</span>
-        <span class="pill">NCL Top 12.5%</span>
-        <span class="pill">NCAE Cyber Games</span>
-      </div>
-
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">See Projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-      </div>
-    </section>
-
-    <section id="about">
-      <p class="section-label">// 01 — About</p>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm studying Computer Science at URI and planning on adding a Data Science minor. I'm also
-            in the Honors College and part of the Schilling Scholars program. Most of the work I care
-            about is low-level: building things myself, understanding the layers underneath them, and
-            getting past black-box abstractions.
-          </p>
-          <p>
-            Right now, my main projects are Hivecore, a terminal-first local AI assistant, and tcom,
-            an 8-bit computer emulator built from scratch. I also spend time on security competitions
-            and running a self-hosted home server, mostly because I learn best by building and
-            maintaining real systems.
-          </p>
-          <p>
-            Long term, I want to work at the intersection of cybersecurity and AI, as I believe that
-            the world will benefit most from using AI in secure and helpful ways.
-          </p>
-        </div>
-
-        <div class="about-details">
-          <div class="detail-item">
-            <span class="detail-label">School</span>
-            <span class="detail-value">University of Rhode Island</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Degree</span>
-            <span class="detail-value">BS Computer Science · Data Science Minor</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">GPA / Program</span>
-            <span class="detail-value">4.0 · Schilling Scholar · Honors College</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Focus</span>
-            <span class="detail-value">Systems · Networking · Cybersecurity</span>
-          </div>
-          <div class="detail-item">
-            <span class="detail-label">Primary Stack</span>
-            <span class="detail-value">C, C++, Python · Linux · POSIX</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <p class="section-label">// 02 — Projects</p>
-      <div class="projects-list">
-
-        <div class="project-item">
-          <div>
-            <div class="project-title-row">
-              <span class="project-name">tcom</span>
-              <div class="tag-row">
-                <span class="tag">C</span>
-                <span class="tag">Emulation</span>
-                <span class="tag">Computer Architecture</span>
-              </div>
-            </div>
-            <p class="project-desc">
-              An 8-bit computer emulator built from scratch, including the CPU, memory model, and
-              instruction set. I built it to better understand computer architecture by implementing
-              the moving parts myself.
+            <p class="hero-bio">
+                Computer Science student at URI focused on cybersecurity, software engineering, and AI.
             </p>
-          </div>
-          <a href="https://github.com/dcdjr/tcom" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-        </div>
 
-        <div class="project-item">
-          <div>
-            <div class="project-title-row">
-              <span class="project-name">HTTP Server</span>
-              <div class="tag-row">
-                <span class="tag">C++</span>
-                <span class="tag">POSIX Sockets</span>
-                <span class="tag">Concurrency</span>
-                <span class="tag">Networking</span>
-              </div>
+            <div class="hero-pills">
+                <span class="pill">URI Computer Science</span>
+                <span class="pill">Planned Data Science Minor</span>
+                <span class="pill">4.0 GPA</span>
+                <span class="pill">Schilling Scholar</span>
+                <span class="pill">Technical Content Lead</span>
+                <span class="pill">NCL Top 12.5%</span>
             </div>
-            <p class="project-desc">
-              A lightweight HTTP/1.1 server built over raw POSIX sockets. It handles request parsing,
-              static file serving, MIME detection, thread-per-connection concurrency, timeouts, request
-              size limits, and directory traversal protection without relying on a framework.
-            </p>
-          </div>
-          <a href="https://github.com/dcdjr/cpp-http-server" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-        </div>
 
-        <div class="project-item">
-          <div>
-            <div class="project-title-row">
-              <span class="project-name">Unix Shell</span>
-              <div class="tag-row">
-                <span class="tag">C</span>
-                <span class="tag">POSIX</span>
-                <span class="tag">Process Control</span>
-              </div>
+            <div class="hero-cta">
+                <a href="static/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">View Resume</a>
+                <a href="#projects" class="btn btn-primary">See Projects</a>
+                <a href="#contact" class="btn btn-ghost">Get in Touch</a>
             </div>
-            <p class="project-desc">
-              A minimal Unix shell in C with command parsing, external execution through fork/execvp,
-              built-in commands, and signal handling that correctly targets child processes on
-              interrupt.
-            </p>
-          </div>
-          <a href="https://github.com/dcdjr/c-mini-shell" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-        </div>
+        </section>
 
-        <div class="project-item">
-          <div>
-            <div class="project-title-row">
-              <span class="project-name">TCP Port Scanner</span>
-              <div class="tag-row">
-                <span class="tag">C</span>
-                <span class="tag">Winsock2</span>
-                <span class="tag">pthreads</span>
-                <span class="tag">Security</span>
-              </div>
+        <section id="about">
+            <p class="section-label">// 01 — About</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm studying Computer Science at the University of Rhode Island with a planned Data Science
+                        minor.
+                        I'm also a Schilling Scholar, an Honors College student, and the Technical Content Lead for the
+                        URI Cyber Club.
+                    </p>
+                    <p>
+                        My main interests are cybersecurity, systems programming, AI, and practical software
+                        engineering.
+                        I like projects that force me to understand what is happening below the abstraction layer,
+                        including
+                        memory, processes, networking, operating systems, and infrastructure.
+                    </p>
+                    <p>
+                        Outside of class, I work in campus IT at URI's Memorial Union, compete in cybersecurity events,
+                        and build projects such as an 8-bit emulator, an HTTP server, a Unix-style shell, and networking
+                        tools.
+                    </p>
+                </div>
+
+                <div class="about-details">
+                    <div class="detail-item">
+                        <span class="detail-label">School</span>
+                        <span class="detail-value">University of Rhode Island</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Degree</span>
+                        <span class="detail-value">B.S. Computer Science · Planned Data Science Minor</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">GPA / Program</span>
+                        <span class="detail-value">4.0 · Schilling Scholar · Honors College</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Focus</span>
+                        <span class="detail-value">Systems · Networking · Cybersecurity</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Primary Stack</span>
+                        <span class="detail-value">C, C++, Python · Linux · POSIX</span>
+                    </div>
+                </div>
             </div>
-            <p class="project-desc">
-              A multithreaded TCP port scanner in C using Winsock2 and pthreads. It uses a queue-based
-              worker model and supports banner grabbing, service detection, configurable timeouts, and
-              per-scan timing stats.
-            </p>
-          </div>
-          <a href="https://github.com/dcdjr/port-scanner" target="_blank" rel="noopener" class="project-link">↗ GitHub</a>
-        </div>
+        </section>
 
-        <div class="project-item">
-          <div>
-            <div class="project-title-row">
-              <span class="project-name">Home Server</span>
-              <div class="tag-row">
-                <span class="tag">Ubuntu Server</span>
-                <span class="tag">Linux</span>
-                <span class="tag">Tailscale</span>
-                <span class="tag">Self-Hosted</span>
-              </div>
+        <section id="projects">
+            <p class="section-label">// 02 — Projects</p>
+            <div class="projects-list">
+
+                <div class="project-item">
+                    <div>
+                        <div class="project-title-row">
+                            <span class="project-name">TCOM 8-Bit Emulator</span>
+                            <div class="tag-row">
+                                <span class="tag">C</span>
+                                <span class="tag">Emulation</span>
+                                <span class="tag">Computer Architecture</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            An 8-bit computer emulator written in C that models registers, memory, a program counter,
+                            status flags, and a custom instruction execution loop. Implements core instructions such as
+                            LOAD, STORE, ADD, SUB, and HALT, with memory safety checks to prevent program code from
+                            being
+                            overwritten during execution.
+                        </p>
+                    </div>
+                    <a href="https://github.com/dcdjr/tcom" target="_blank" rel="noopener" class="project-link">↗
+                        GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <div>
+                        <div class="project-title-row">
+                            <span class="project-name">HTTP Server</span>
+                            <div class="tag-row">
+                                <span class="tag">C++</span>
+                                <span class="tag">POSIX Sockets</span>
+                                <span class="tag">Concurrency</span>
+                                <span class="tag">Networking</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            A lightweight HTTP/1.1 server built over raw POSIX sockets. It handles request parsing,
+                            static file serving, MIME detection, thread-per-connection concurrency, timeouts, request
+                            size limits, and directory traversal protection without relying on a framework.
+                        </p>
+                    </div>
+                    <a href="https://github.com/dcdjr/cpp-http-server" target="_blank" rel="noopener"
+                        class="project-link">↗ GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <div>
+                        <div class="project-title-row">
+                            <span class="project-name">Minimal Unix Shell</span>
+                            <div class="tag-row">
+                                <span class="tag">C</span>
+                                <span class="tag">POSIX</span>
+                                <span class="tag">Process Control</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            A minimal Unix shell in C with command parsing, external execution through fork/execvp,
+                            built-in commands, and signal handling that correctly targets child processes on
+                            interrupt.
+                        </p>
+                    </div>
+                    <a href="https://github.com/dcdjr/c-mini-shell" target="_blank" rel="noopener"
+                        class="project-link">↗ GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <div>
+                        <div class="project-title-row">
+                            <span class="project-name">TCP Port Scanner</span>
+                            <div class="tag-row">
+                                <span class="tag">C</span>
+                                <span class="tag">Winsock2</span>
+                                <span class="tag">pthreads</span>
+                                <span class="tag">Security</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            A multithreaded TCP port scanner in C using Winsock2 and pthreads. It uses a queue-based
+                            worker model and supports banner grabbing, service detection, configurable timeouts, and
+                            per-scan timing stats.
+                        </p>
+                    </div>
+                    <a href="https://github.com/dcdjr/port-scanner" target="_blank" rel="noopener"
+                        class="project-link">↗ GitHub</a>
+                </div>
+
+                <div class="project-item">
+                    <div>
+                        <div class="project-title-row">
+                            <span class="project-name">Self-Hosted Ubuntu Server</span>
+                            <div class="tag-row">
+                                <span class="tag">Ubuntu Server</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">Tailscale</span>
+                                <span class="tag">Self-Hosted</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            A self-hosted Ubuntu server with approximately 3 TB of storage used for remote development,
+                            experimentation, and personal infrastructure. Configured secure private access through
+                            Tailscale
+                            and maintained as a practical environment for Linux, networking, and systems work.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div>
+                        <div class="project-title-row">
+                            <span class="project-name">Password50</span>
+                            <div class="tag-row">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">SQLite</span>
+                                <span class="tag">Security</span>
+                            </div>
+                        </div>
+                        <p class="project-desc">
+                            A password management web application built with Flask, SQLite, and Fernet encryption.
+                            Implements user authentication, encrypted credential storage, SQL CRUD operations, password
+                            search, and a Bootstrap-based interface. Built as my CS50 final project.
+                        </p>
+                    </div>
+                    <a href="https://github.com/dcdjr/password50" target="_blank" rel="noopener" class="project-link">↗
+                        GitHub</a>
+                </div>
+
             </div>
-            <p class="project-desc">
-              A self-hosted Ubuntu server with about 3TB of storage. I set up the OS, configured
-              services, and handle ongoing administration myself, with remote access through Tailscale.
-              It has mostly been a way to learn infrastructure by actually running it.
+        </section>
+
+        <section id="experience">
+            <p class="section-label">// 03 — Experience</p>
+            <div class="exp-list">
+
+                <div class="exp-item">
+                    <span class="exp-time">Current</span>
+                    <div>
+                        <p class="exp-role">Student Information Technologist</p>
+                        <p class="exp-org">URI Memorial Union IT</p>
+                        <p class="exp-desc">
+                            Troubleshoot hardware, software, operating system, and connectivity issues for students and
+                            staff
+                            in a live campus IT environment. Support Memorial Union technology operations by resolving
+                            user
+                            issues, maintaining website accessibility standards, and assisting with routine technical
+                            and
+                            security procedures.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="competitions">
+            <p class="section-label">// 04 — Organizations &amp; Competitions</p>
+            <div class="exp-list">
+
+                <div class="exp-item">
+                    <span class="exp-time">Current</span>
+                    <div>
+                        <p class="exp-role">Technical Content Lead</p>
+                        <p class="exp-org">URI Cyber Club</p>
+                        <p class="exp-desc">Work with practical security labs, Linux infrastructure, networking tools,
+                            and club exercises focused on hands-on cybersecurity fundamentals.</p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <span class="exp-time">2026</span>
+                    <div>
+                        <p class="exp-role">Competitor — Scored Top 12.5% nationally</p>
+                        <p class="exp-org">National Cyber League Individual Game</p>
+                        <p class="exp-desc">Competed individually across cryptography, network analysis, forensics, log
+                            analysis, and exploitation challenges.</p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <span class="exp-time">2025</span>
+                    <div>
+                        <p class="exp-role">2nd Place</p>
+                        <p class="exp-org">Hack@URI Mini Hackathon</p>
+                        <p class="exp-desc">
+                            Placed 2nd in a team hackathon by building an AI-powered multi-tool for tutoring,
+                            practice, and interactive learning workflows under a limited development timeline.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="exp-item">
+                    <span class="exp-time">2026</span>
+                    <div>
+                        <p class="exp-role">Competitor</p>
+                        <p class="exp-org">NCAE Cyber Games</p>
+                        <p class="exp-desc">Collaborated on team defense, service hardening, infrastructure monitoring,
+                            and incident-response tasks in a practical cyber competition environment.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills">
+            <p class="section-label">// 05 — Skills</p>
+            <div class="skills-grid">
+
+                <div>
+                    <p class="skill-label">Languages</p>
+                    <div class="skill-items">
+                        <span class="chip hi">C</span>
+                        <span class="chip hi">C++</span>
+                        <span class="chip hi">Python</span>
+                        <span class="chip">SQL</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="skill-label">Systems &amp; Networking</p>
+                    <div class="skill-items">
+                        <span class="chip hi">Linux</span>
+                        <span class="chip hi">POSIX</span>
+                        <span class="chip">Bash</span>
+                        <span class="chip">TCP/IP</span>
+                        <span class="chip">HTTP</span>
+                        <span class="chip">Sockets</span>
+                        <span class="chip">Make</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="skill-label">Security</p>
+                    <div class="skill-items">
+                        <span class="chip hi">Packet Analysis</span>
+                        <span class="chip hi">Log Analysis</span>
+                        <span class="chip">Network Reconnaissance</span>
+                        <span class="chip">System Troubleshooting</span>
+                        <span class="chip">Wireshark</span>
+                        <span class="chip">Nmap</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="skill-label">Web &amp; Tools</p>
+                    <div class="skill-items">
+                        <span class="chip">Flask</span>
+                        <span class="chip">SQLite</span>
+                        <span class="chip">HTML/CSS</span>
+                        <span class="chip">Bootstrap</span>
+                        <span class="chip">Git</span>
+                        <span class="chip">GitHub</span>
+                        <span class="chip">Neovim</span>
+                        <span class="chip">VS Code</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <p class="section-label" style="justify-content:center;">// 06 — Contact</p>
+            <h2 class="contact-heading">Let's talk.</h2>
+            <p class="contact-sub">
+                I'm currently looking for internships, research opportunities, and technical roles in cybersecurity,
+                systems, software engineering, AI, and fintech.
             </p>
-          </div>
+            <a href="mailto:ddipietro8227@gmail.com" class="contact-email">ddipietro8227@gmail.com</a>
+            <div class="contact-links">
+                <a href="https://github.com/dcdjr" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+                <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener"
+                    class="btn btn-ghost">LinkedIn</a>
+                <a href="static/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span class="footer-copy">© 2026 Daniel DiPietro Jr.</span>
+        <div class="footer-links">
+            <a href="https://github.com/dcdjr" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:ddipietro8227@gmail.com">Email</a>
         </div>
-
-      </div>
-    </section>
-
-    <section id="experience">
-      <p class="section-label">// 03 — Experience</p>
-      <div class="exp-list">
-
-        <div class="exp-item">
-          <span class="exp-time">Current</span>
-          <div>
-            <p class="exp-role">Student Information Technologist</p>
-            <p class="exp-org">URI Memorial Union IT</p>
-            <p class="exp-desc">Provide frontline technical support and help maintain systems for the URI Memorial Union IT team.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="competitions">
-      <p class="section-label">// 04 — Organizations &amp; Competitions</p>
-      <div class="exp-list">
-
-        <div class="exp-item">
-          <span class="exp-time">Current</span>
-          <div>
-            <p class="exp-role">Technical Content Lead</p>
-            <p class="exp-org">URI Cyber Club</p>
-            <p class="exp-desc">Work with practical security labs, Linux infrastructure, networking tools, and club exercises focused on hands-on cybersecurity fundamentals.</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <span class="exp-time">2026</span>
-          <div>
-            <p class="exp-role">Competitor — Scored Top 12.5% nationally</p>
-            <p class="exp-org">National Cyber League Individual Game</p>
-            <p class="exp-desc">Competed individually across cryptography, network analysis, forensics, log analysis, and exploitation challenges.</p>
-          </div>
-        </div>
-
-        <div class="exp-item">
-          <span class="exp-time">2026</span>
-          <div>
-            <p class="exp-role">Competitor</p>
-            <p class="exp-org">NCAE Cyber Games</p>
-            <p class="exp-desc">Collaborated on team defense, service hardening, infrastructure monitoring, and incident-response tasks in a practical cyber competition environment.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="skills">
-      <p class="section-label">// 05 — Skills</p>
-      <div class="skills-grid">
-
-        <div>
-          <p class="skill-label">Core Languages</p>
-          <div class="skill-items">
-            <span class="chip hi">C</span>
-            <span class="chip hi">C++</span>
-            <span class="chip hi">Python</span>
-          </div>
-        </div>
-
-        <div>
-          <p class="skill-label">Systems &amp; OS</p>
-          <div class="skill-items">
-            <span class="chip hi">POSIX / Unix</span>
-            <span class="chip hi">Linux</span>
-            <span class="chip">Bash</span>
-            <span class="chip">GDB</span>
-          </div>
-        </div>
-
-        <div>
-          <p class="skill-label">Networking &amp; Security</p>
-          <div class="skill-items">
-            <span class="chip hi">TCP/IP · Sockets</span>
-            <span class="chip">Nmap</span>
-            <span class="chip">Wireshark</span>
-            <span class="chip">Tailscale / VPNs</span>
-            <span class="chip">Log Analysis</span>
-          </div>
-        </div>
-
-        <div>
-          <p class="skill-label">Supporting</p>
-          <div class="skill-items">
-            <span class="chip">SQL</span>
-            <span class="chip">Flask</span>
-            <span class="chip">Git</span>
-            <span class="chip">Neovim</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact">
-      <p class="section-label" style="justify-content:center;">// 06 — Contact</p>
-      <h2 class="contact-heading">Let's talk.</h2>
-      <p class="contact-sub">I'm interested in internships, research, and technical work where systems, security, or low-level software are involved.</p>
-      <a href="mailto:ddipietro8227@gmail.com" class="contact-email">ddipietro8227 [at] gmail [dot] com</a>
-      <div class="contact-links">
-        <a href="https://github.com/dcdjr" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-        <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-        <a href="static/resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <span class="footer-copy">© 2026 Daniel DiPietro Jr.</span>
-    <div class="footer-links">
-      <a href="https://github.com/dcdjr" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/in/daniel-dipietro-jr" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:ddipietro8227@gmail.com">Email</a>
-    </div>
-  </footer>
+    </footer>
 
 </body>
+
 </html>
