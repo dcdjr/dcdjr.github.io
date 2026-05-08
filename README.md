@@ -4,7 +4,7 @@ This is my personal portfolio site for showcasing my technical projects, resume,
 
 ## Live Site
 
-dcdjr.me
+[dcdjr.me](https://dcdjr.me)
 
 ## Focus
 
@@ -14,16 +14,17 @@ The site highlights my work in:
 - Cybersecurity
 - Networking
 - Software engineering
-- AI-related projects
+- Local-first AI tools
 
 ## Featured Projects
 
+- Mind
+- Sentinel
 - TCOM 8-Bit Emulator
-- HTTP Server
+- C++ HTTP Server
 - Minimal Unix Shell
 - TCP Port Scanner
-- Hivecore
-- Self-Hosted Ubuntu Server
+- Password50
 
 ## Tech
 
