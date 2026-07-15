@@ -1,0 +1,654 @@
+/* ============================================================
+   dcdjr.me — main stylesheet
+   1. Tokens        2. Base          3. Nav
+   4. Layout        5. Hero          6. About
+   7. Projects      8. Experience    9. Skills
+   10. Contact      11. Footer       12. Motion
+   13. Responsive
+   ============================================================ */
+
+/* ─── 1. Tokens ─────────────────────────────────────────── */
+:root {
+  --bg: #0b0b0c;
+  --surface: #141416;
+  --border: #232326;
+  --border-strong: #333338;
+  --text: #e7e7e4;
+  --muted: #8e8e89;
+  --faint: #6b6b68;
+  --accent: #f59e0b;
+  --accent-soft: rgba(245, 158, 11, 0.12);
+  --accent-glow: rgba(245, 158, 11, 0.25);
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Figtree', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --radius: 4px;
+  --max-w: 1040px;
+  --pad-x: clamp(1.25rem, 5vw, 3rem);
+  --nav-h: 56px;
+}
+
+/* ─── 2. Base ───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 1rem);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle amber glow anchoring the top of the page */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto;
+  height: 480px;
+  background: radial-gradient(ellipse 70% 100% at 50% -20%, var(--accent-soft), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 1rem;
+  z-index: 999;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #000;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/* ─── 3. Nav ────────────────────────────────────────────── */
+nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad-x);
+  background: rgba(11, 11, 12, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-logo::after {
+  content: '.';
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.9rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* ─── 4. Layout ─────────────────────────────────────────── */
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--nav-h) var(--pad-x) 0;
+}
+
+section {
+  padding: 5.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.75rem;
+}
+
+.section-label::after {
+  content: '';
+  height: 1px;
+  width: 3rem;
+  background: linear-gradient(90deg, var(--accent-glow), transparent);
+}
+
+/* ─── 5. Hero ───────────────────────────────────────────── */
+#hero {
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7rem 0 6rem;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-name {
+  font-size: clamp(2.1rem, 5vw, 3.9rem);
+  max-width: 24ch;
+  margin-bottom: 1.75rem;
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.75rem;
+  list-style: none;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  padding: 0.35em 0.8em;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  padding: 0.7em 1.4em;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: #fbbf24;
+  border-color: #fbbf24;
+  box-shadow: 0 6px 24px var(--accent-glow);
+}
+
+.btn-ghost {
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* ─── 6. About ──────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 0.97rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.about-text p + p {
+  margin-top: 1.1rem;
+}
+
+.about-details {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.detail-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+/* ─── 7. Projects ───────────────────────────────────────── */
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.75rem 1.25rem;
+  margin: 0 -1.25rem;
+  border-top: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+
+.project-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.project-item:hover {
+  background: var(--surface);
+}
+
+.project-title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.project-item:hover .project-name {
+  color: var(--accent);
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  padding: 0.2em 0.6em;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.project-desc {
+  font-size: 0.91rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 66ch;
+}
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  color: var(--faint);
+  text-decoration: none;
+  padding: 0.4em 0.8em;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.project-link:hover {
+  color: var(--accent);
+  border-color: var(--accent-glow);
+}
+
+/* ─── 8. Experience & Competitions ──────────────────────── */
+.exp-list {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+}
+
+.exp-time {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--faint);
+  padding-top: 0.25rem;
+}
+
+.exp-role {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.exp-org {
+  font-size: 0.84rem;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.exp-desc {
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 62ch;
+}
+
+/* ─── 9. Skills ─────────────────────────────────────────── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem 3rem;
+}
+
+.skill-label {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.7rem;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  padding: 0.3em 0.7em;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+
+.chip.hi {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent-glow);
+}
+
+/* ─── 10. Contact ───────────────────────────────────────── */
+#contact {
+  text-align: center;
+  padding-bottom: 6.5rem;
+}
+
+#contact .section-label {
+  justify-content: center;
+}
+
+#contact .section-label::before {
+  content: '';
+  height: 1px;
+  width: 3rem;
+  background: linear-gradient(270deg, var(--accent-glow), transparent);
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.contact-sub {
+  font-size: 0.97rem;
+  color: var(--muted);
+  max-width: 48ch;
+  margin: 0 auto 0.5rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.83rem;
+  color: var(--faint);
+  text-decoration: none;
+  margin-bottom: 2.25rem;
+  transition: color 0.2s;
+}
+
+.contact-email:hover {
+  color: var(--accent);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ─── 11. Footer ────────────────────────────────────────── */
+footer {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2rem var(--pad-x);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-copy,
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--faint);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+/* ─── 12. Motion ────────────────────────────────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hero > * {
+  opacity: 0;
+  animation: fade-up 0.5s ease forwards;
+}
+
+.hero-name    { animation-delay: 0.1s; }
+.hero-pills   { animation-delay: 0.2s; }
+.hero-cta     { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  #hero > * {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* ─── 13. Responsive ────────────────────────────────────── */
+@media (max-width: 640px) {
+  :root {
+    --pad-x: 1.15rem;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  section {
+    padding: 3.75rem 0;
+  }
+
+  #hero {
+    min-height: auto;
+    padding: 4.5rem 0 4rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-pills,
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .section-label {
+    margin-bottom: 2rem;
+  }
+
+  .about-grid,
+  .skills-grid,
+  .exp-item {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    gap: 2.25rem;
+  }
+
+  .exp-item {
+    gap: 0.35rem;
+  }
+
+  .exp-time {
+    padding-top: 0;
+  }
+
+  .project-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-link {
+    justify-self: start;
+  }
+}

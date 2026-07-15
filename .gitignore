@@ -27,3 +27,6 @@ build/
 
 # Env (future-proofing)
 .env
+
+# Agent
+.claude
